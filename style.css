@@ -1,0 +1,215 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+body,
+html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Logo */
+#logo {
+  background-position: center;
+  background-size: cover;
+  background-image: url("img/Zakat\ Al\ Fitr.png");
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+#logo:hover {
+  opacity: 0.8;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  position: relative;
+  width: auto;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #1d3557;
+  text-align: center;
+  padding: 34px 36px;
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom: 2px solid transparent;
+}
+
+.topnav a:before {
+  content: "";
+  display: block;
+  position: relative;
+  width: 0;
+  top: 2em;
+  border-bottom: 2px solid #ef7d39;
+  transition: width 0.4s;
+}
+
+.topnav a:hover {
+  height: 1px;
+  opacity: 0.7;
+  text-align: left;
+}
+
+.topnav a:hover:before {
+  width: 100%;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%;
+}
+
+/* Media queries for mobile devices */
+@media screen and (max-width: 1920px) {
+  .bgimg-1 {
+    background-image: url("img/Page\ 1\ -\ Accueil.png");
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .bgimg-1 {
+    background-image: url("img/page\ 1\ responsive.png");
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .bgimg-1 {
+    background-image: url("img/page\ 1\ responsive.png");
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .bgimg-1 {
+    background-image: url("img/page\ 1\ responsive.png");
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .bgimg-1 {
+    background-image: url("img/page\ 1\ responsive.png");
+  }
+}
+
+.w3-xxlarge {
+  color: #1d3557;
+  font-weight: lighter;
+}
+
+.w3-xxxlarge {
+  color: #1d3557;
+  font-weight: bold;
+}
+
+.w3-small {
+  color: #1d3557;
+  font-weight: lighter;
+}
+
+.w3-large {
+  color: #1d3557;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 360px) {
+  .w3-small,
+  .w3-large,
+  #cta {
+    position: relative;
+    top: 170px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .w3-small,
+  .w3-large,
+  #cta {
+    position: relative;
+    top: 180px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .w3-small,
+  .w3-large,
+  #cta {
+    position: relative;
+    top: 200px;
+  }
+}
+
+.copyright {
+  position: relative;
+  left: 450px;
+  color: #1d3557;
+}
+
+@media screen and (max-width: 360px) {
+  .copyright {
+    font-size: xx-small;
+    position: relative;
+    left: 9px;
+    top: 3px;
+  }
+}
+
+/* icons social network */
+.fa-facebook {
+  font-size: 20px;
+  margin: 5px 2px;
+  color: #3b5998;
+}
+
+.fa-instagram {
+  font-size: 20px;
+  margin: 5px 2px;
+  color: #c32aa3;
+}
+
+.fa-snapchat {
+  font-size: 20px;
+  margin: 5px 2px;
+  color: #fffc00;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.fa-twitter {
+  font-size: 20px;
+  margin: 5px 2px;
+  color: #1da1f2;
+}
+
+@media screen and (max-width: 360px) {
+  .fa-facebook,
+  .fa-instagram,
+  .fa-snapchat,
+  .fa-twitter {
+    position: relative;
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    margin: 5px 2px;
+    bottom: 10px;
+    left: 15px;
+  }
+}
