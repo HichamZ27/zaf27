@@ -14,6 +14,42 @@ html {
   line-height: 1.8;
 }
 
+/* Barre latérale s'ouvre à droite */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 100px;
+  opacity: 0.5;
+}
+
+.sidenav a {
+  padding: 18px 18px 18px 18px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #1d3557;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
 /* Logo */
 #logo {
   background-position: center;
@@ -77,11 +113,13 @@ html {
 .bgimg-1 {
   background-position: center;
   background-repeat: no-repeat;
+  background-image: url("img/Page\ 1\ -\ Accueil.png");
   background-size: cover;
   min-height: 100%;
 }
 
 /* Media queries for mobile devices */
+
 @media screen and (max-width: 1920px) {
   .bgimg-1 {
     background-image: url("img/Page\ 1\ -\ Accueil.png");
@@ -112,6 +150,12 @@ html {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .bgimg-1 {
+    background-image: url("img/page\ 1\ responsive.png");
+  }
+}
+
 .w3-xxlarge {
   color: #1d3557;
   font-weight: lighter;
@@ -132,6 +176,7 @@ html {
   font-weight: bold;
 }
 
+/* Media queries for mobile devices */
 @media screen and (max-width: 360px) {
   .w3-small,
   .w3-large,
@@ -146,7 +191,7 @@ html {
   .w3-large,
   #cta {
     position: relative;
-    top: 180px;
+    top: 140px;
   }
 }
 
@@ -161,8 +206,86 @@ html {
 
 .copyright {
   position: relative;
-  left: 450px;
+  left: 1100px;
   color: #1d3557;
+}
+
+/* Media queries for mobile devices */
+@media screen and (max-width: 1920px) {
+  .copyright {
+    position: relative;
+    left: 750px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .copyright {
+    position: relative;
+    left: 500px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .copyright {
+    position: relative;
+    left: 450px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .copyright {
+    position: relative;
+    left: 310px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .copyright {
+    position: relative;
+    left: 150px;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .copyright {
+    font-size: x-small;
+    position: relative;
+    left: 30px;
+    bottom: 1px
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .copyright {
+    font-size: x-small;
+    position: relative;
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .copyright {
+    font-size: xx-small;
+    position: relative;
+    left: 20px;
+    top: 2px;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .copyright {
+    font-size: xx-small;
+    position: relative;
+    left: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .copyright {
+    font-size: xx-small;
+    position: relative;
+    left: 15px;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -170,33 +293,121 @@ html {
     font-size: xx-small;
     position: relative;
     left: 9px;
-    top: 3px;
   }
 }
 
 /* icons social network */
 .fa-facebook {
-  font-size: 20px;
+  font-size: 30px;
   margin: 5px 2px;
+  padding: 10px;
   color: #3b5998;
 }
 
 .fa-instagram {
-  font-size: 20px;
+  font-size: 30px;
   margin: 5px 2px;
+  padding: 10px;
   color: #c32aa3;
 }
 
 .fa-snapchat {
-  font-size: 20px;
+  font-size: 30px;
   margin: 5px 2px;
+  padding: 10px;
   color: #fffc00;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .fa-twitter {
-  font-size: 20px;
+  font-size: 30px;
   margin: 5px 2px;
+  padding: 10px;
   color: #1da1f2;
+}
+
+/* Media queries for mobile devices */
+@media screen and (max-width: 428px) {
+  .fa-facebook,
+  .fa-instagram,
+  .fa-snapchat,
+  .fa-twitter {
+    position: relative;
+    padding: 30px;
+    font-size: 40px;
+    width: 40px;
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .fa-facebook,
+  .fa-instagram,
+  .fa-snapchat,
+  .fa-twitter {
+    position: relative;
+    padding: 30px;
+    font-size: 40px;
+    width: 40px;
+    bottom: 15px;
+    left: 10px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .fa-facebook,
+  .fa-instagram,
+  .fa-snapchat,
+  .fa-twitter {
+    position: relative;
+    padding: 30px;
+    font-size: 40px;
+    width: 40px;
+    left: 10px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .fa-facebook,
+  .fa-instagram,
+  .fa-snapchat,
+  .fa-twitter {
+    position: relative;
+    padding: 30px;
+    font-size: 35px;
+    width: 50px;
+    margin: 5px 2px;
+    bottom: 10px;
+    left: 1px;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .fa-facebook,
+  .fa-instagram,
+  .fa-snapchat,
+  .fa-twitter {
+    position: relative;
+    padding: 30px;
+    font-size: 35px;
+    width: 40px;
+    bottom: 10px;
+    left: 1px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .fa-facebook,
+  .fa-instagram,
+  .fa-snapchat,
+  .fa-twitter {
+    position: relative;
+    padding: 30px;
+    font-size: 35px;
+    width: 50px;
+    bottom: 2px;
+    left: -10px;
+  }
 }
 
 @media screen and (max-width: 360px) {
@@ -205,11 +416,11 @@ html {
   .fa-snapchat,
   .fa-twitter {
     position: relative;
-    padding: 20px;
-    font-size: 30px;
+    padding: 25px;
+    font-size: 35px;
     width: 50px;
     margin: 5px 2px;
-    bottom: 10px;
-    left: 15px;
+    bottom: 5px;
+    left: 5px;
   }
 }

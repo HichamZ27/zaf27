@@ -14,14 +14,14 @@
 <body>
 
   <!-- Sidebar on small screens when clicking the menu icon -->
-  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large-1 w3-padding-16">Close ×</a>
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-home"></i> ACCUEIL</a>
-    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-warehouse"></i> DÉPÔTS</a>
-    <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-balance-scale"></i> MESURES</a>
-    <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button"><i class="fa fa-users"></i> L'ÉQUIPE</a>
+  <div class="sidenav" id="mySidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#about" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-home"></i> ACCUEIL</a>
+    <a href="#warehouse" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-warehouse"></i> DÉPÔTS</a>
+    <a href="#weight" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-balance-scale"></i> MESURES</a>
+    <a href="#team" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-users"></i> L'ÉQUIPE</a>
     <!-- <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a> -->
-  </nav>
+  </div>
   
   <!-- Header with full-height image -->
   <header class="bgimg-1 w3-display-container" class="responsive" id="home">
@@ -30,16 +30,13 @@
       <div class="topnav">
         <!-- Right-sided navbar links -->
         <div class="w3-right w3-hide-small">
-          <a href="home.html"><i class="fa fa-home"></i> ACCUEIL</a>
+          <a href="home.html" class="active"><i class="fa fa-home"></i> ACCUEIL</a>
           <a href="dépôts.html"><i class="fa fa-warehouse"></i> DÉPÔTS</a>
           <a href="mesures.html"><i class="fa fa-balance-scale"></i> MESURES</a>
           <a href="équipe.html"><i class="fa fa-users"></i> L'ÉQUIPE</a>
         </div>
         <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-        
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-          <i class="fa fa-bars"></i>
-        </a>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="openNav()">&#9776;</a>
       </div>
       <a href="home.html" class="w3-bar-item w3-button" id="logo" alt="App Zakat Al Fitr"></a>
     </div>
@@ -52,10 +49,10 @@
       <p><a href="contact.html" class="w3-button w3-green w3-hover-light-green w3-round-large w3-margin-top" id="cta">RECEVOIR VOTRE ZAKAT AL FITR</a></p>
     </div> 
     <div class="w3-display-bottomleft w3-text-grey w3-large-2" style="padding:24px 48px">
-      <i class="fa-brands fa-facebook w3-hover-opacity"></i>
-      <i class="fa-brands fa-instagram w3-hover-opacity"></i>
-      <i class="fa-brands fa-snapchat w3-hover-opacity"></i>
-      <i class="fa-brands fa-twitter w3-hover-opacity"></i>
+      <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fa-brands fa-facebook w3-hover-opacity"></i></a>
+      <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram w3-hover-opacity"></i></a>
+      <a href="https://accounts.snapchat.com/" target="_blank"><i class="fa-brands fa-snapchat w3-hover-opacity"></i></a>
+      <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter w3-hover-opacity"></i></a>
       <footer class="copyright">&#169 Copyright 2022 - Tous droits réservés - App Zakat Al Fitr</footer>
     </div>
   </header>
