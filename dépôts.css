@@ -26,7 +26,7 @@ html {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 100px;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .sidenav a {
@@ -115,105 +115,153 @@ html {
   width: 100%;
 }
 
+input[type=text] {
+  font-size: 1rem;                                                                                                                                                                                                                                                                                                                              
+}
+
 /* Full height image header */
 .bgimg-1 {
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("img/Page\ 1\ -\ Accueil.png");
-  background-size: cover;
+  background-image: url("img/Page\ 2\ \ -\ Dépôts.png");
+  background-size: 100%;
   min-height: 100%;
-}
-
-.closebtn{
-  color: #ef7d39;
-}
-
+}                                        
 
 /* Media queries for mobile devices */
-
 @media screen and (max-width: 1920px) {
   .bgimg-1 {
-    background-image: url("img/Page\ 1\ -\ Accueil.png");
+    background-image: url("img/Page\ 2\ \ -\ Dépôts.png");
   }
 }
 
 @media screen and (max-width: 375px) {
   .bgimg-1 {
-    background-image: url("img/page\ 1\ responsive.png");
+    background-image: url("img/Page\ 2\ -\ Responsive.png");
   }
 }
 
 @media screen and (max-width: 412px) {
   .bgimg-1 {
-    background-image: url("img/page\ 1\ responsive.png");
+    background-image: url("img/Page\ 2\ -\ Responsive.png");
   }
 }
 
 @media screen and (max-width: 360px) {
   .bgimg-1 {
-    background-image: url("img/page\ 1\ responsive.png");
+    background-image: url("img/Page\ 2\ -\ Responsive.png");
   }
 }
 
 @media screen and (max-width: 810px) {
   .bgimg-1 {
-    background-image: url("img/page\ 1\ responsive.png");
+    background-image: url("img/Page\ 2\ -\ Responsive.png");
   }
 }
 
 @media screen and (max-width: 800px) {
   .bgimg-1 {
-    background-image: url("img/page\ 1\ responsive.png");
+    background-image: url("img/Page\ 2\ -\ Responsive.png");
   }
 }
 
-.w3-xxlarge {
+/*search bar */
+::placeholder{
   color: #1d3557;
-  font-weight: lighter;
 }
 
-.w3-xxxlarge {
-  color: #1d3557;
-  font-weight: bold;
+.fa-search{
+  color: #EF7D39;
+  font-size: 30px;
 }
 
-.w3-small {
-  color: #1d3557;
-  font-weight: lighter;
+.input-wrapper{
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  display: flex;
+  align-items: center;
+  width: 20%;
+  background: #2EB467;
+  padding: 0.5rem;
+  opacity: 0.7;
+  border-radius: 0.5rem;
 }
 
-.w3-large {
-  color: #1d3557;
-  font-weight: bold;
+input{
+  margin: 0 0.5rem 0 0.5rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #2EB467;
 }
+
+@media only screen and (min-width : 360px) and (max-width : 428px)
+{
+	.input-wrapper
+	{
+		width: 90%;
+		margin: 0 auto;
+	}
+
+}
+/* .search-box {
+  position: absolute;
+  top : 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2EB467;
+  height: 50px;
+  border-radius: 10px;
+  padding: 10px;
+  
+}
+
+.search-box:hover > .search-text{
+  width: 240px;
+  padding: 0 6px;
+}
+
+.search-box:hover > .search-btn{
+  background: white;
+  color: #EF7D39;
+  
+}
+
+.search-btn {
+  color: #e84118;
+  float: right;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+.search-btn > i {
+  font-size: 30px;
+}
+
+.search-text {
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding: 0;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  transition: 0.4s;
+  line-height: 40px;
+  width: 550px; 
+} */
 
 /* Media queries for mobile devices */
-@media screen and (max-width: 360px) {
-  .w3-small,
-  .w3-large,
-  #cta {
-    position: relative;
-    top: 170px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .w3-small,
-  .w3-large,
-  #cta {
-    position: relative;
-    top: 140px;
-  }
-}
-
-@media screen and (max-width: 428px) {
-  .w3-small,
-  .w3-large,
-  #cta {
-    position: relative;
-    top: 200px;
-  }
-}
 
 .copyright {
   position: relative;
@@ -225,7 +273,7 @@ html {
 @media screen and (max-width: 1920px) {
   .copyright {
     position: relative;
-    left: 700px;
+    left: 750px;
   }
 }
 
@@ -239,7 +287,7 @@ html {
 @media screen and (max-width: 1280px) {
   .copyright {
     position: relative;
-    left: 400px;
+    left: 450px;
   }
 }
 
