@@ -115,6 +115,10 @@ html {
   width: 100%;
 }
 
+.active, .a:hover {
+  border-bottom: 2px solid #ef7d39;
+}
+
 input[type=text] {
   font-size: 1rem;                                                                                                                                                                                                                                                                                                                              
 }
@@ -195,6 +199,21 @@ input{
   background: #2EB467;
 }
 
+#match-list {
+  position: relative;
+  top: 210px;
+}
+
+table, th, td {
+  border: 2px solid #1D3557;
+  border-collapse: collapse;
+  color: #1D3557;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
 @media only screen and (min-width : 360px) and (max-width : 428px)
 {
 	.input-wrapper
@@ -204,9 +223,13 @@ input{
 		margin: 0 auto;
 	}
 
+  #match-list {
+    position: relative;
+    top: 100px;
+  }
 }
 
-@media only screen and (min-width : 800px) and (max-width : 1440px)
+@media only screen and (min-width : 800px) and (max-width : 1920px)
 {
 	.input-wrapper
 	{
@@ -215,6 +238,14 @@ input{
 		margin: 0 auto;
 	}
 
+  #match-list {
+    position: relative;
+    top: 130px;
+  }
+
+  img {
+    width: 400px;
+  }
 }
 
 /* Media queries for mobile devices */
@@ -441,5 +472,202 @@ input{
     margin: 5px 2px;
     bottom: 5px;
     left: 5px;
+  }
+}
+
+/* Measures page */
+
+p {
+  color: #1D3557;
+  text-align: center;
+}
+
+.responsive {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 40px;
+  max-width: 80%;
+  height: auto;
+} 
+
+#myImg {
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 8px;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 8px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Team page */
+
+.text-1 {
+  text-align: justify;
+  text-justify: inter-word;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #1D3557;
+}
+
+hr.new1 {
+  border: 3px solid #DCAD0D;
+  width: 80%;
+  position: relative;
+  left: 22%;
+  bottom: 10px;
+}
+
+hr.new2 {
+  border: 3px solid #DCAD0D;
+  width: 40%;
+  position: relative;
+  right: 2%;
+  bottom: 10px;
+}
+
+hr.new3 {
+  border: 3px solid #DCAD0D;
+  width: 80%;
+  position: relative;
+  right: 2%;
+  bottom: 650px;
+}
+
+.vl {
+  border-left: 6px solid #DCAD0D;
+  height: 300px;
+  position: relative;
+  left: 102%;
+  bottom: 330px;
+}
+
+.vl1 {
+  border-left: 6px solid #DCAD0D;
+  height: 300px;
+  position: relative;
+  right: 2%;
+  bottom: 330px;
+}
+
+/* Countdown */
+
+.container {
+  color: #1D3557;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  font-family: -apple-system, 
+    BlinkMacSystemFont, 
+    "Segoe UI", 
+    Roboto, 
+    Oxygen-Sans, 
+    Ubuntu, 
+    Cantarell, 
+    "Helvetica Neue", 
+    sans-serif;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: calc(1.5rem * var(--smaller));
+  }
+  
+  li {
+    font-size: calc(1.125rem * var(--smaller));
+  }
+  
+  li span {
+    font-size: calc(3.375rem * var(--smaller));
   }
 }

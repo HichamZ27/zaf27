@@ -17,9 +17,9 @@
   <div class="sidenav" id="mySidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="home.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-home"></i> ACCUEIL</a>
-    <a href="dépôts.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-warehouse"></i> DÉPÔTS</a>
-    <a href="mesures.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-balance-scale"></i> MESURES</a>
-    <a href="équipe.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-users"></i> L'ÉQUIPE</a>
+    <a href="warehouse.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-warehouse"></i> DÉPÔTS</a>
+    <a href="measures.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-balance-scale"></i> MESURES</a>
+    <a href="team.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-users"></i> L'ÉQUIPE</a>
     <a href="contact.html" onclick="closeNav()"><button class="w3-button w3-small w3-border w3-border-blue w3-round-large"><u>RECEVOIR VOTRE ZAKAT AL FITR</u></button></a>
     <!-- <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a> -->
   </div>
@@ -32,9 +32,9 @@
         <!-- Right-sided navbar links -->
         <div class="w3-right w3-hide-small">
           <a href="home.html" class="active"><i class="fa fa-home"></i> ACCUEIL</a>
-          <a href="dépôts.html"><i class="fa fa-warehouse"></i> DÉPÔTS</a>
-          <a href="mesures.html"><i class="fa fa-balance-scale"></i> MESURES</a>
-          <a href="équipe.html"><i class="fa fa-users"></i> L'ÉQUIPE</a>
+          <a href="warehouse.html"><i class="fa fa-warehouse"></i> DÉPÔTS</a>
+          <a href="measures.html"><i class="fa fa-balance-scale"></i> MESURES</a>
+          <a href="team.html"><i class="fa fa-users"></i> L'ÉQUIPE</a>
           <a href="contact.html" class="w3-tiny w3-round-large" id="CTA"> 
               <u><b>RECEVOIR VOTRE<br> ZAKAT AL FITR</b></u>
           </a>
@@ -49,16 +49,11 @@
     
     <div class="input-wrapper">
       <div class="fa fa-search"></div>
-      <input type="text" placeholder="Rechercher un dépôt dans votre ville..." />
+      <input type="text" id="search" placeholder="Rechercher un dépôt dans votre ville..." />
     </div>
-
-    <!-- <div class="search-box">
-        <input class="search-text" type="text" placeholder="Rechercher un dépôt dans votre ville...">
-      <a href="#" class="search-btn">
-        <i class="fas fa-search"></i>
-      </a>
-    </div> -->
-
+    
+    <div id="match-list"></div>
+    
     <div class="w3-display-bottomleft w3-text-grey w3-large-2" style="padding:24px 48px">
       <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fa-brands fa-facebook w3-hover-opacity"></i></a>
       <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram w3-hover-opacity"></i></a>

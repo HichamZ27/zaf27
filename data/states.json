@@ -1,8 +1,36 @@
 [
 	{
-		"abbr": "VE",
-		"ville": "Vernon",
-		"adresse": "20 rue Jean Moulin, 27200 Vernon",
-		"date et horaire": "jeudi 29 avril - 17H-18H"
+		"name": "Vernon",
+		"adress": "20 rue Jean Moulin, 27200 Vernon",
+		"date": "jeudi 29 avril",
+		"hour": "17H-18H"
+	},
+	
+	{
+		"name": "Val-de-Reuil",
+		"adress": "20 rue Jean Moulin, 27200 Vernon",
+		"date": "vendredi 29 avril",
+		"hour": "17H-18H"
+	},
+
+	{
+		"name": "Gaillon",
+		"adress": "18 rue Émile Zola",
+		"date": "vendredi 29 avril",
+		"hour": "17H-18H"
+	},
+
+	{
+		"name": "Gisors",
+		"adress": "18 rue Émile Zola",
+		"date": "vendredi 29 avril",
+		"hour": "17H-18H"
+	},
+
+	{
+		"name": "Gasny",
+		"adress": "18 rue Émile Zola",
+		"date": "vendredi 29 avril",
+		"hour": "17H-18H"
 	}
 ]
