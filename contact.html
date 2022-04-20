@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="dépôts.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="img/Zakat Al Fitr.png">
@@ -20,7 +20,6 @@
     <a href="warehouse.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-warehouse"></i> DÉPÔTS</a>
     <a href="measures.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-balance-scale"></i> MESURES</a>
     <a href="team.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-users"></i> L'ÉQUIPE</a>
-    <a href="contact.html" onclick="closeNav()"><button class="w3-button w3-small w3-border w3-border-blue w3-round-large"><u>RECEVOIR VOTRE ZAKAT AL FITR</u></button></a>
     <!-- <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a> -->
   </div>
   
@@ -35,9 +34,6 @@
           <a href="warehouse.html"><i class="fa fa-warehouse"></i> DÉPÔTS</a> 
           <a href="measures.html" class="active"><i class="fa fa-balance-scale"></i> MESURES</a>
           <a href="team.html"><i class="fa fa-users"></i> L'ÉQUIPE</a>
-          <a href="contact.html" class="w3-tiny w3-round-large" id="CTA">  
-              <u><b>RECEVOIR VOTRE<br> ZAKAT AL FITR</b></u>
-          </a>
           <!-- <a href="" class="w3-button w3-border w3-border-blue w3-round-large" id="cta">RECEVOIR VOTRE ZAKAT AL FITR></a> -->
         </div>
 
@@ -46,18 +42,48 @@
       </div>
       <a href="index.html" class="w3-bar-item w3-button" id="logo" alt="App Zakat Al Fitr"></a>
     </div>
-      
-    <!-- Trigger the Modal -->
-    <img id="myImg" src="img/Mesures:denrées.jpg" alt="Tableau des mesures" class="responsive" />
-    <br />
-    <p><i>Cliquez sur l'image pour agrandir</i></p>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img01">
-      <div id="caption"></div>
+    <div class="w3-container" style="padding:128px 16px" id="contact">
+      <div class="container-contact">
+        <h1 class="w3-center"><u>Formulaire de contact</u></h1>
+          <br>
+          <form id="my-form" action="https://formspree.io/f/mknkvvoy" method="POST" enctype="multipart/form-data">           
+            <div class="row">
+              <div class="col-75">
+                <input type="text" class="form-control" id="fname" name="firstname" placeholder="Nom*" required></input>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-75">
+                <input type="text" class="form-control" id="lname" name="lastname" placeholder="Prénom*" required></input>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <div class="col-75">
+                <input type="text" class="form-control" id="mail" name="mail" type="email" placeholder="Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="email" required ></input>
+              </div>
+            </div>
+            <br>
+              <div class="row">
+                <div class="col-75">
+                  <textarea id="message" name="message" placeholder="Votre message ici..." style="height:200px"></textarea>
+                  </div>
+                </div>
+                <!-- <input type="file" id="myFile" name="upload"> -->
+                <div class="row">
+                  <br>
+                  <input class="w3-btn" type="submit" value="Envoyer" >
+                </div>
+                <br>
+                <div id="status"></div> 
+              </div>
+            </div>
+          </form>
+      </div> 
     </div>
+  
 
     <div class="w3-display-bottomleft w3-text-grey w3-large-2" style="padding:24px 48px">
       <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fa-brands fa-facebook w3-hover-opacity"></i></a>
@@ -68,7 +94,7 @@
     </div>
   </header>
 
-  <script src="measures.js"></script>
+  <script src="contact.js"></script>
 
 </body>
 </html>

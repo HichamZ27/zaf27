@@ -662,3 +662,104 @@ li span {
     font-size: calc(3.375rem * var(--smaller));
   }
 }
+
+/* Section Contact */
+
+u {
+  color: #DCAD0D
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 40%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 12px;
+  border-bottom: 1px solid gray;
+  color: #1D3557;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+::placeholder {
+  color: #1D3557;
+}
+
+input[type="submit"] {
+  background-color: #03989e;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #028b8f;
+}
+
+.container-contact {
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.col-75 {
+  float: center;
+  margin-top: 6px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .col-75,
+  input[type="submit"] .col-75,
+  input[type="text"],
+  select,
+  textarea {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+#status {
+  width: 50%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+#status.success {
+  background-color: #028b8f;
+  animation: status 6s ease forwards;
+}
+
+#status.error {
+  background-color: rgb(152, 36, 36);
+  animation: status 6s ease forwards;
+}
+
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  50% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+  

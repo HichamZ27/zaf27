@@ -1,5 +1,13 @@
-// Code Team page
+//Code for bar menu
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
 
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
+// Code Team page
 (function () {
   const second = 1000,
     minute = second * 60,
@@ -13,7 +21,7 @@
     mm = String(today.getMonth() + 1).padStart(2, "0"),
     yyyy = today.getFullYear(),
     nextYear = yyyy + 1,
-    dayMonth = "09/30/",
+    dayMonth = "04/30/",
     birthday = dayMonth + yyyy;
 
   today = mm + "/" + dd + "/" + yyyy;
@@ -40,7 +48,7 @@
 
       //do something later when date is reached
       if (distance < 0) {
-        document.getElementById("headline").innerText = "It's my birthday!";
+        document.getElementById("headline").innerText = "C'est terminé!";
         document.getElementById("countdown").style.display = "none";
         document.getElementById("content").style.display = "block";
         clearInterval(x);
