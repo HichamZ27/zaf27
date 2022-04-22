@@ -43,7 +43,7 @@ const outputHtml = (matches) => {
     const html = matches
       .map(
         (match) => `
-          <table class="center" style="width:60%">
+          <table class="center" style="width:80%">
             <tr>
               <th style="width:30%">Ville</th>
               <th style="width:30%">Adresse</th>

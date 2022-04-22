@@ -13,7 +13,10 @@ async function handleSubmit(event) {
   })
     .then((response) => {
       status.classList.add("success");
-      status.innerHTML = "Votre message a été envoyé avec succès!";
+      status.innerHTML =
+        "Votre message a été envoyé avec succès!\
+      Un membre de notre équipe va prendre contact avec vous.\
+      Qu'Allah vous préserve.";
       form.reset();
     })
     .catch((error) => {

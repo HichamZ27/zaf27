@@ -1,36 +1,23 @@
 [
 	{
 		"name": "Vernon",
-		"adress": "20 rue Jean Moulin, 27200 Vernon",
-		"date": "jeudi 29 avril",
-		"hour": "17H-18H"
-	},
-	
-	{
-		"name": "Val-de-Reuil",
-		"adress": "20 rue Jean Moulin, 27200 Vernon",
-		"date": "vendredi 29 avril",
-		"hour": "17H-18H"
+		"adress": "Boulevard Georges Azémia, 27200 Vernon",
+		"date": "Mardi 26 avril",
+		"hour": "14H30-17H30 puis 18H30-20H"
 	},
 
 	{
-		"name": "Gaillon",
-		"adress": "18 rue Émile Zola",
-		"date": "vendredi 29 avril",
-		"hour": "17H-18H"
-	},
+		"name": "Vernon",
+		"adress": "Boulevard Georges Azémia, 27200 Vernon",
+		"date": "Mercredi 27 avril",
+		"hour": "14H30-17H30 puis 18H30-20H"
+	}, 
 
 	{
-		"name": "Gisors",
-		"adress": "18 rue Émile Zola",
-		"date": "vendredi 29 avril",
-		"hour": "17H-18H"
-	},
-
-	{
-		"name": "Gasny",
-		"adress": "18 rue Émile Zola",
-		"date": "vendredi 29 avril",
-		"hour": "17H-18H"
+		"name": "Vernon",
+		"adress": "Boulevard Georges Azémia, 27200 Vernon",
+		"date": "Jedui 28 avril",
+		"hour": "14H30-17H30"
 	}
+
 ]

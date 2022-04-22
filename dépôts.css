@@ -127,7 +127,7 @@ input[type=text] {
 .bgimg-1 {
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("img/Page\ 2\ \ -\ Dépôts.png");
+  background-image: url("img/Page\ 2\ Dépôts.png");
   background-size: cover;
   min-height: 100%;
 }                                        
@@ -135,36 +135,36 @@ input[type=text] {
 /* Media queries for mobile devices */
 @media screen and (max-width: 1920px) {
   .bgimg-1 {
-    background-image: url("img/Page\ 2\ \ -\ Dépôts.png");
+    background-image: url("img/Page\ 2\ Dépôts.png");
   }
 }
 
 @media screen and (max-width: 810px) {
   .bgimg-1 {
-    background-image: url("img/Page\ 2\ \ -\ Dépôts.png");
+    background-image: url("img/Page\ 2\ Dépôts.png");
   }
 }
 
 @media screen and (max-width: 800px) {
   .bgimg-1 {
-    background-image: url("img/Page\ 2\ -\ Responsive.png");
+    background-image: url("img/Page\ 2\ Responsive.png");
   }
 }
 @media screen and (max-width: 412px) {
   .bgimg-1 {
-    background-image: url("img/Page\ 2\ -\ Responsive.png");
+    background-image: url("img/Page\ 2\ Responsive.png");
   }
 }
 
 @media screen and (max-width: 375px) {
   .bgimg-1 {
-    background-image: url("img/Page\ 2\ -\ Responsive.png");
+    background-image: url("img/Page\ 2\ Responsive.png");
   }
 }
 
 @media screen and (max-width: 360px) {
   .bgimg-1 {
-    background-image: url("img/Page\ 2\ -\ Responsive.png");
+    background-image: url("img/Page\ 2\ Responsive.png");
   }
 }
 
@@ -221,11 +221,11 @@ table, th, td {
     left: 5%;
 		width: 90%;
 		margin: 0 auto;
-	}
+  }
 
   #match-list {
     position: relative;
-    top: 100px;
+    top: 90px;
   }
 }
 
@@ -240,7 +240,7 @@ table, th, td {
 
   #match-list {
     position: relative;
-    top: 130px;
+    top: 160px;
   }
 
   img {
@@ -276,7 +276,7 @@ table, th, td {
 @media screen and (max-width: 1280px) {
   .copyright {
     position: relative;
-    top: 6px;
+    top: 5px;
     left: 400px;
   }
 }
@@ -285,6 +285,7 @@ table, th, td {
   .copyright {
     position: relative;
     left: 310px;
+    top: 1px;
   }
 }
 
@@ -411,9 +412,24 @@ table, th, td {
   .fa-twitter {
     position: relative;
     padding: 30px;
-    font-size: 40px;
+    font-size: 30px;
     width: 40px;
     left: 10px;
+    top: 10px;
+  }
+}
+
+@media screen and (max-width: 411px) {
+  .fa-facebook,
+  .fa-instagram,
+  .fa-snapchat,
+  .fa-twitter {
+    position: relative;
+    padding: 30px;
+    font-size: 30px;
+    width: 40px;
+    left: 10px;
+    top: 10px;
   }
 }
 
@@ -477,6 +493,27 @@ table, th, td {
 
 /* Measures page */
 
+@media only screen and (min-width : 800px) and (max-width : 1920px){
+
+  #myImg{
+  width: 30%;
+  }
+}
+
+@media screen and (max-width: 810px) {
+
+  #myImg{
+    width: 55%;
+  } 
+}
+
+@media only screen and (min-width : 360px) and (max-width : 428px){
+
+  #myImg{
+  width: 80%;
+  }
+}
+
 p {
   color: #1D3557;
   text-align: center;
@@ -519,7 +556,7 @@ p {
 .modal-content {
   margin: auto;
   display: block;
-  width: 90%;
+  width: 95%;
   max-width: 700px;
   border-radius: 8px;
 }
@@ -638,7 +675,7 @@ h1 {
 
 li {
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   list-style-type: none;
   padding: 1em;
   text-transform: uppercase;
