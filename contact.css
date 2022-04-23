@@ -26,7 +26,7 @@ html {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 100px;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .sidenav a {
@@ -133,41 +133,20 @@ input[type=text] {
 }                                        
 
 /* Media queries for mobile devices */
-@media screen and (max-width: 1920px) {
+@media only screen and (min-width: 800px)  and (max-width: 1920px){
   .bgimg-1 {
     background-image: url("img/Page\ 2\ Dépôts.png");
   }
 }
 
-@media screen and (max-width: 810px) {
-  .bgimg-1 {
-    background-image: url("img/Page\  2\ Dépôts.png");
-  }
-}
 
-@media screen and (max-width: 800px) {
-  .bgimg-1 {
-    background-image: url("img/Page\ 2\ Responsive.png");
-  }
-}
-@media screen and (max-width: 412px) {
+@media only screen and (min-width : 360px) and (max-width : 428px){
   .bgimg-1 {
     background-image: url("img/Page\ 2\ Responsive.png");
   }
 }
 
-@media screen and (max-width: 375px) {
-  .bgimg-1 {
-    background-image: url("img/Page\ 2\ Responsive.png");
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .bgimg-1 {
-    background-image: url("img/Page\ 2\ Responsive.png");
-  }
-}
-
+/* Copyright */
 .copyright {
   position: relative;
   left: 1000px;
@@ -186,8 +165,8 @@ input[type=text] {
 @media screen and (max-width: 1440px) {
   .copyright {
     position: relative;
-    bottom: 1px;
-    left: 450px;
+    top: -15px;
+    left: 470px;
   }
 }
 
@@ -206,10 +185,19 @@ input[type=text] {
   }
 }
 
+@media screen and (max-width: 810px) {
+  .copyright {
+    position: relative;
+    left: 180px;
+    top: -15px
+  }
+}
+
 @media screen and (max-width: 800px) {
   .copyright {
     position: relative;
     left: 150px;
+    top: -18px
   }
 }
 
@@ -218,7 +206,7 @@ input[type=text] {
     font-size: x-small;
     position: relative;
     left: 30px;
-    top: 1px;
+    top: -10px;
   }
 }
 
@@ -227,7 +215,7 @@ input[type=text] {
     font-size: x-small;
     position: relative;
     left: 22px;
-    top: 2px;
+    top: -10px;
   }
 }
 
@@ -242,10 +230,10 @@ input[type=text] {
 
 @media screen and (max-width: 390px) {
   .copyright {
-    font-size: xx-small;
+    font-size: x-small;
     position: relative;
-    left: 25px;
-    top: 2px;
+    left: 15px;
+    top: -10px;
   }
 }
 
@@ -260,9 +248,9 @@ input[type=text] {
 
 @media screen and (max-width: 375px) {
   .copyright {
-    font-size: xx-small;
+    font-size: x-small;
     position: relative;
-    left: 16px;
+    left: 10px;
   }
 }
 
@@ -306,6 +294,34 @@ input[type=text] {
 }
 
 /* Media queries for mobile devices */
+@media screen and (max-width: 1440px) {
+  .fa-facebook,
+  .fa-instagram,
+  .fa-snapchat,
+  .fa-twitter {
+    position: relative;
+    padding: 30px;
+    font-size: 30px;
+    width: 40px;
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .fa-facebook,
+  .fa-instagram,
+  .fa-snapchat,
+  .fa-twitter {
+    position: relative;
+    padding: 30px;
+    font-size: 30px;
+    width: 40px;
+    left: 20px;
+    bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 428px) {
   .fa-facebook,
   .fa-instagram,
@@ -316,7 +332,7 @@ input[type=text] {
     font-size: 40px;
     width: 40px;
     left: 20px;
-    bottom: 20px;
+    bottom: 80px;
   }
 }
 
@@ -329,7 +345,7 @@ input[type=text] {
     padding: 30px;
     font-size: 40px;
     width: 40px;
-    bottom: 15px;
+    bottom: 80px;
     left: 10px;
   }
 }
@@ -358,7 +374,7 @@ input[type=text] {
     font-size: 35px;
     width: 50px;
     margin: 5px 2px;
-    bottom: 10px;
+    bottom: 80px;
     left: 1px;
   }
 }
@@ -386,7 +402,7 @@ input[type=text] {
     padding: 30px;
     font-size: 35px;
     width: 50px;
-    bottom: 2px;
+    bottom: 80px;
     left: -10px;
   }
 }
@@ -406,28 +422,7 @@ input[type=text] {
   }
 }
 
-#myImg:hover {opacity: 0.7;}
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 /* Section Contact */
-
 u {
   color: #DCAD0D
 }
