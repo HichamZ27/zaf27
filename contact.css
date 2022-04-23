@@ -127,7 +127,7 @@ input[type=text] {
 .bgimg-1 {
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("img/Page\ 2\ Dépôts.png");
+  background-image: url("img/Page\ 2\ Depots.png");
   background-size: cover;
   min-height: 100%;
 }                                        
@@ -135,7 +135,7 @@ input[type=text] {
 /* Media queries for mobile devices */
 @media only screen and (min-width: 800px)  and (max-width: 1920px){
   .bgimg-1 {
-    background-image: url("img/Page\ 2\ Dépôts.png");
+    background-image: url("img/Page\ 2\ Depots.png");
   }
 }
 
