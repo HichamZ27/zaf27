@@ -15,8 +15,7 @@ async function handleSubmit(event) {
       status.classList.add("success");
       status.innerHTML =
         "Votre message a été envoyé avec succès!\
-      Un membre de notre équipe va prendre contact avec vous.\
-      Qu'Allah vous préserve.";
+      Un membre de notre équipe va prendre contact avec vous.";
       form.reset();
     })
     .catch((error) => {
