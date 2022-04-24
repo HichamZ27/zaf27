@@ -26,7 +26,7 @@ html {
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 100px;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .sidenav a {
@@ -127,42 +127,19 @@ input[type=text] {
 .bgimg-1 {
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("img/Page\ 2\ Dépôts.png");
+  background-image: url("img/Page\ 2\ Depots.png");
   background-size: cover;
   min-height: 100%;
 }                                        
 
 /* Media queries for mobile devices */
-@media screen and (max-width: 1920px) {
+@media only screen and (min-width: 800px)  and (max-width: 1920px){
   .bgimg-1 {
-    background-image: url("img/Page\ 2\ Dépôts.png");
+    background-image: url("img/Page\ 2\ Depots.png");
   }
 }
 
-@media screen and (max-width: 810px) {
-  .bgimg-1 {
-    background-image: url("img/Page\ 2\ Dépôts.png");
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .bgimg-1 {
-    background-image: url("img/Page\ 2\ Responsive.png");
-  }
-}
-@media screen and (max-width: 412px) {
-  .bgimg-1 {
-    background-image: url("img/Page\ 2\ Responsive.png");
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .bgimg-1 {
-    background-image: url("img/Page\ 2\ Responsive.png");
-  }
-}
-
-@media screen and (max-width: 360px) {
+@media only screen and (min-width : 360px) and (max-width : 428px){
   .bgimg-1 {
     background-image: url("img/Page\ 2\ Responsive.png");
   }

@@ -128,42 +128,17 @@ html {
   color: #ef7d39;
 }
 
-
 /* Media queries for mobile devices */
-
-@media screen and (max-width: 1920px) {
+@media only screen and (min-width: 800px)  and (max-width: 1920px){
   .bgimg-1 {
     background-image: url("img/Page\ 1\ Accueil.png");
   }
 }
 
-@media screen and (max-width: 375px) {
-  .bgimg-1 {
-    background-image: url("img/page\ 1\ responsive.png");
-  }
-}
 
-@media screen and (max-width: 412px) {
+@media only screen and (min-width : 360px) and (max-width : 428px){
   .bgimg-1 {
-    background-image: url("img/page\ 1\ responsive.png");
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .bgimg-1 {
-    background-image: url("img/page\ 1\ responsive.png");
-  }
-}
-
-@media screen and (max-width: 810px) {
-  .bgimg-1 {
-    background-image: url("img/page\ 1\ responsive.png");
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .bgimg-1 {
-    background-image: url("img/page\ 1\ responsive.png");
+    background-image: url("img/Page\ 1\ responsive.png");
   }
 }
 
@@ -180,15 +155,35 @@ html {
 .w3-small {
   color: #1d3557;
   font-weight: lighter;
+  width: 100%;
+  margin-top: 0;
+  padding: 12px 30px;
+  margin-bottom: 16px;
 }
 
 .w3-large {
   color: #1d3557;
   font-weight: bold;
+  width: 100%;
+  margin-top: 0;
+  padding: 12px 30px;
+  margin-bottom: 16px;
 }
 
 /* Media queries for mobile devices */
-@media screen and (max-width: 428px) {
+
+@media screen and (max-width: 600px) {
+  .w3-small,
+  .w3-large,
+  #cta {
+    width: 100%;
+    margin-top: 0;
+    padding: 12px 30px;
+    margin-bottom: 16px;
+  }
+}
+
+/* @media screen and (max-width: 428px) {
   .w3-small,
   .w3-large,
   #cta {
@@ -253,7 +248,7 @@ html {
     position: relative;
     top: 170px;
   }
-}
+} */
 
 .copyright {
   position: relative;
@@ -290,10 +285,17 @@ html {
   }
 }
 
+@media screen and (max-width: 810px) {
+  .copyright {
+    position: relative;
+    left: 180px;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .copyright {
     position: relative;
-    left: 150px;
+    left: 10px;
   }
 }
 
@@ -310,7 +312,16 @@ html {
   .copyright {
     font-size: x-small;
     position: relative;
-    left: 20px;
+    left: 25px;
+  }
+}
+
+@media screen and (max-width: 412px) {
+  .copyright {
+    font-size: x-small;
+    position: relative;
+    left: 25px;
+    top: 1px;
   }
 }
 
@@ -318,7 +329,7 @@ html {
   .copyright {
     font-size: xx-small;
     position: relative;
-    left: 20px;
+    left: 25px;
     top: 2px;
   }
 }
@@ -335,7 +346,7 @@ html {
   .copyright {
     font-size: xx-small;
     position: relative;
-    left: 15px;
+    left: 20px;
   }
 }
 
@@ -344,7 +355,7 @@ html {
     font-size: xx-small;
     position: relative;
     left: 10px;
-    top: 14px;
+    top: 3px;
   }
 }
 
@@ -388,7 +399,7 @@ html {
     font-size: 40px;
     width: 40px;
     left: 20px;
-    bottom: 20px;
+    top: -80px;
   }
 }
 
@@ -401,7 +412,7 @@ html {
     padding: 30px;
     font-size: 40px;
     width: 40px;
-    bottom: 15px;
+    top: -80px;
     left: 10px;
   }
 }
@@ -413,10 +424,10 @@ html {
   .fa-twitter {
     position: relative;
     padding: 30px;
-    font-size: 30px;
+    font-size: 40px;
     width: 40px;
     left: 10px;
-    top: 10px;
+    top: -60px;
   }
 }
 
@@ -427,10 +438,10 @@ html {
   .fa-twitter {
     position: relative;
     padding: 30px;
-    font-size: 30px;
+    font-size: 35px;
     width: 40px;
     left: 10px;
-    top: 10px;
+    top: -50px;
   }
 }
 
@@ -444,7 +455,7 @@ html {
     font-size: 35px;
     width: 50px;
     margin: 5px 2px;
-    top: 10px;
+    top: -80px;
     left: 1px;
   }
 }
@@ -458,7 +469,7 @@ html {
     padding: 30px;
     font-size: 35px;
     width: 40px;
-    top: 1px;
+    top: -80px;
     left: 1px;
   }
 }
@@ -470,9 +481,9 @@ html {
   .fa-twitter {
     position: relative;
     padding: 30px;
-    font-size: 20px;
+    font-size: 35px;
     width: 50px;
-    bottom: 2px;
+    top: -30px;
     left: -10px;
   }
 }
@@ -487,7 +498,7 @@ html {
     font-size: 35px;
     width: 50px;
     margin: 5px 2px;
-    top: 10px;
+    top: -80px;
     left: 5px;
   }
 }
