@@ -138,7 +138,7 @@ html {
 
 @media only screen and (min-width : 360px) and (max-width : 428px){
   .bgimg-1 {
-    background-image: url("img/Page\ 1\ responsive.png");
+    background-image: url("img/Page\ 1\ Responsive.png");
   }
 }
 
@@ -182,73 +182,6 @@ html {
     margin-bottom: 16px;
   }
 }
-
-/* @media screen and (max-width: 428px) {
-  .w3-small,
-  .w3-large,
-  #cta {
-    position: relative;
-    top: 200px;
-  }
-}
-@media screen and (max-width: 428px) {
-  .w3-small,
-  .w3-large,
-  #cta {
-    position: relative;
-    top: 200px;
-  }
-}
-
-@media screen and (max-width: 412px) {
-  .w3-small,
-  .w3-large,
-  #cta {
-    position: relative;
-    top: 150px;
-    font-size: 10px;
-  }
-}
-
-@media screen and (max-width: 411px) {
-  .w3-small,
-  .w3-large,
-  #cta {
-    position: relative;
-    top: 150px;
-    font-size: 10px;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .w3-small,
-  .w3-large,
-  #cta {
-    position: relative;
-    top: 170px;
-    font-size: 15px;
-
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .w3-small,
-  .w3-large,
-  #cta {
-    position: relative;
-    top: 130px;
-    font-size: 10px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .w3-small,
-  .w3-large,
-  #cta {
-    position: relative;
-    top: 170px;
-  }
-} */
 
 .copyright {
   position: relative;
