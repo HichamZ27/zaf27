@@ -115,72 +115,37 @@ html {
   width: 100%;
 }
 
+.active, .a:hover {
+  border-bottom: 2px solid #ef7d39;
+}
+
+input[type=text] {
+  font-size: 1rem;                                                                                                                                                                                                                                                                                                                              
+}
+
 /* Full height image header */
 .bgimg-1 {
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("img/Page\ 1\ Accueil.png");
+  background-image: url("img/Page\ 2\ Depots.png");
   background-size: cover;
   min-height: 100%;
-}
-
-.closebtn{
-  color: #ef7d39;
-}
+}                                        
 
 /* Media queries for mobile devices */
 @media only screen and (min-width: 800px)  and (max-width: 1920px){
   .bgimg-1 {
-    background-image: url("img/Page\ 1\ Accueil.png");
+    background-image: url("img/Page\ 2\ Depots.png");
   }
 }
 
 @media only screen and (min-width : 360px) and (max-width : 428px){
   .bgimg-1 {
-    background-image: url("img/Page\ 1.png");
+    background-image: url("img/Page\ 2\ Responsive.png");
   }
-}
-
-.w3-xxlarge {
-  color: #1d3557;
-  font-weight: lighter;
-}
-
-.w3-xxxlarge {
-  color: #1d3557;
-  font-weight: bold;
-}
-
-.w3-small {
-  color: #1d3557;
-  font-weight: lighter;
-  width: 100%;
-  margin-top: 0;
-  padding: 12px 30px;
-  margin-bottom: 16px;
-}
-
-.w3-large {
-  color: #1d3557;
-  font-weight: bold;
-  width: 100%;
-  margin-top: 0;
-  padding: 12px 30px;
-  margin-bottom: 16px;
 }
 
 /* Media queries for mobile devices */
-
-@media screen and (max-width: 600px) {
-  .w3-small,
-  .w3-large,
-  #cta {
-    width: 100%;
-    margin-top: 0;
-    padding: 12px 30px;
-    margin-bottom: 16px;
-  }
-}
 
 .copyright {
   position: relative;
@@ -192,6 +157,7 @@ html {
 @media screen and (max-width: 1920px) {
   .copyright {
     position: relative;
+    bottom: 10px;
     left: 700px;
   }
 }
@@ -199,13 +165,15 @@ html {
 @media screen and (max-width: 1440px) {
   .copyright {
     position: relative;
-    left: 500px;
+    bottom: 1px;
+    left: 450px;
   }
 }
 
 @media screen and (max-width: 1280px) {
   .copyright {
     position: relative;
+    top: 3px;
     left: 400px;
   }
 }
@@ -214,20 +182,23 @@ html {
   .copyright {
     position: relative;
     left: 310px;
+    top: 1px;
   }
 }
 
 @media screen and (max-width: 810px) {
   .copyright {
     position: relative;
-    left: 180px;
+    left: 170px;
+    top: -10px;
   }
 }
 
 @media screen and (max-width: 800px) {
   .copyright {
     position: relative;
-    left: 10px;
+    left: 150px;
+    top: -18px;
   }
 }
 
@@ -236,7 +207,7 @@ html {
     font-size: x-small;
     position: relative;
     left: 30px;
-    bottom: 1px
+    top: 1px;
   }
 }
 
@@ -244,16 +215,8 @@ html {
   .copyright {
     font-size: x-small;
     position: relative;
-    left: 25px;
-  }
-}
-
-@media screen and (max-width: 412px) {
-  .copyright {
-    font-size: x-small;
-    position: relative;
-    left: 25px;
-    top: 1px;
+    left: 22px;
+    top: 2px;
   }
 }
 
@@ -278,7 +241,7 @@ html {
   .copyright {
     font-size: xx-small;
     position: relative;
-    left: 20px;
+    left: 16px;
   }
 }
 
@@ -286,8 +249,7 @@ html {
   .copyright {
     font-size: xx-small;
     position: relative;
-    left: 10px;
-    top: 3px;
+    left: 9px;
   }
 }
 
@@ -321,6 +283,20 @@ html {
 }
 
 /* Media queries for mobile devices */
+@media screen and (max-width: 810px) {
+  .fa-facebook,
+  .fa-instagram,
+  .fa-snapchat,
+  .fa-twitter {
+    position: relative;
+    padding: 30px;
+    font-size: 30px;
+    width: 40px;
+    left: 10px;
+    bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 428px) {
   .fa-facebook,
   .fa-instagram,
@@ -331,7 +307,7 @@ html {
     font-size: 40px;
     width: 40px;
     left: 20px;
-    top: -80px;
+    bottom: 20px;
   }
 }
 
@@ -344,7 +320,7 @@ html {
     padding: 30px;
     font-size: 40px;
     width: 40px;
-    top: -80px;
+    bottom: 15px;
     left: 10px;
   }
 }
@@ -356,10 +332,10 @@ html {
   .fa-twitter {
     position: relative;
     padding: 30px;
-    font-size: 40px;
+    font-size: 30px;
     width: 40px;
     left: 10px;
-    top: -60px;
+    top: 10px;
   }
 }
 
@@ -370,10 +346,10 @@ html {
   .fa-twitter {
     position: relative;
     padding: 30px;
-    font-size: 35px;
+    font-size: 30px;
     width: 40px;
     left: 10px;
-    top: -50px;
+    top: 10px;
   }
 }
 
@@ -387,7 +363,7 @@ html {
     font-size: 35px;
     width: 50px;
     margin: 5px 2px;
-    top: -80px;
+    bottom: 10px;
     left: 1px;
   }
 }
@@ -401,7 +377,7 @@ html {
     padding: 30px;
     font-size: 35px;
     width: 40px;
-    top: -80px;
+    bottom: 10px;
     left: 1px;
   }
 }
@@ -415,7 +391,7 @@ html {
     padding: 30px;
     font-size: 35px;
     width: 50px;
-    top: -30px;
+    bottom: 2px;
     left: -10px;
   }
 }
@@ -430,7 +406,125 @@ html {
     font-size: 35px;
     width: 50px;
     margin: 5px 2px;
-    top: -80px;
+    bottom: 5px;
     left: 5px;
   }
+}
+
+/* Measures page */
+
+@media only screen and (min-width : 800px) and (max-width : 1920px){
+
+  #myImg{
+  width: 30%;
+  }
+}
+
+@media screen and (max-width: 810px) {
+
+  #myImg{
+    width: 55%;
+  } 
+}
+
+@media only screen and (min-width : 360px) and (max-width : 428px){
+
+  #myImg{
+  width: 80%;
+  }
+}
+
+p {
+  color: #1D3557;
+  text-align: center;
+}
+
+.responsive {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 40px;
+  max-width: 80%;
+  height: auto;
+} 
+
+#myImg {
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 8px;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 95%;
+  max-width: 700px;
+  border-radius: 8px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
