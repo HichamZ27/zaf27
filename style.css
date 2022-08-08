@@ -21,12 +21,12 @@ html {
   position: fixed;
   z-index: 1;
   top: 0;
-  right: 0;
+  right: 0px;
   background-color: #111;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 100px;
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .sidenav a {
@@ -53,7 +53,7 @@ html {
 
 #openbtn{
   color: #ef7d39;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 /* Logo */
@@ -170,14 +170,13 @@ html {
 }
 
 /* Media queries for mobile devices */
-
 @media screen and (max-width: 600px) {
   .w3-small,
   .w3-large,
   #cta {
     width: 100%;
     margin-top: 0;
-    padding: 12px 30px;
+    padding: 12px 20px;
     margin-bottom: 16px;
   }
 }
@@ -233,61 +232,53 @@ html {
 
 @media screen and (max-width: 428px) {
   .copyright {
-    font-size: x-small;
-    position: relative;
-    left: 30px;
-    bottom: 1px
+    font-size: smaller;
+    position: center;
+    top: 10px;
   }
 }
 
 @media screen and (max-width: 414px) {
   .copyright {
     font-size: x-small;
-    position: relative;
-    left: 25px;
+    position: center;
   }
 }
 
 @media screen and (max-width: 412px) {
   .copyright {
     font-size: x-small;
-    position: relative;
-    left: 25px;
-    top: 1px;
+    position: center;
   }
 }
 
 @media screen and (max-width: 390px) {
   .copyright {
-    font-size: xx-small;
-    position: relative;
-    left: 25px;
-    top: 2px;
+    font-size: x-small;
+    position: center;
   }
 }
 
 @media screen and (max-width: 384px) {
   .copyright {
-    font-size: xx-small;
-    position: relative;
-    left: 20px;
+    font-size: x-small;
+    position: center;
   }
 }
 
 @media screen and (max-width: 375px) {
   .copyright {
-    font-size: xx-small;
-    position: relative;
-    left: 20px;
+    font-size: x-small;
+    position: center;
+    top: 10px;
   }
 }
 
 @media screen and (max-width: 360px) {
   .copyright {
-    font-size: xx-small;
-    position: relative;
-    left: 10px;
-    top: 3px;
+    font-size: x-small;
+    position: center;
+    top: 20px;
   }
 }
 
@@ -303,7 +294,11 @@ html {
   font-size: 30px;
   margin: 5px 2px;
   padding: 10px;
-  color: #c32aa3;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .fa-snapchat {
@@ -328,7 +323,7 @@ html {
   .fa-twitter {
     position: relative;
     padding: 30px;
-    font-size: 40px;
+    font-size: 35px;
     width: 40px;
     left: 20px;
     top: -80px;
@@ -342,7 +337,7 @@ html {
   .fa-twitter {
     position: relative;
     padding: 30px;
-    font-size: 40px;
+    font-size: 35px;
     width: 40px;
     top: -80px;
     left: 10px;
@@ -356,7 +351,7 @@ html {
   .fa-twitter {
     position: relative;
     padding: 30px;
-    font-size: 40px;
+    font-size: 35px;
     width: 40px;
     left: 10px;
     top: -60px;
@@ -427,7 +422,7 @@ html {
   .fa-twitter {
     position: relative;
     padding: 25px;
-    font-size: 35px;
+    font-size: 25px;
     width: 50px;
     margin: 5px 2px;
     top: -80px;
