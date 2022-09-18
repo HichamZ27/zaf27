@@ -123,6 +123,33 @@ input[type=text] {
   font-size: 1rem;                                                                                                                                                                                                                                                                                                                              
 }
 
+/* Button in the navbar */
+.button {
+    background-color: #1d3557;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    /* padding: 16px 32px; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 25px 40px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .button1 {
+    background-color: transparent; 
+    color: #1d3557; 
+    border: 2px solid #1d3557;
+  }
+
+  .button1:hover {
+    background-color: #1d3557;
+    color: white;
+  }
+  
 /* Full height image header */
 .bgimg-1 {
   background-position: center;
@@ -148,6 +175,7 @@ input[type=text] {
 /*search bar */
 ::placeholder{
   color: #1d3557;
+  font-size: 100%;
 }
 
 .fa-search{
@@ -200,7 +228,7 @@ table, th, td {
 {
   .input[type="text"],
   .input-wrapper {
-    bottom: 50px;
+    bottom: 30px;
     width: 100%;
   }
 }
@@ -213,8 +241,17 @@ table, th, td {
 	}
 }
 
-/* Media queries for mobile devices */
+/* Footer */
+@media only screen and (min-width: 800px) and (max-width : 1920px)
+{
+.bgimg-2{
+  background-position: center;
+  background-image: url("img/Footer.png");
+  background-repeat: no-repeat;
+  }
+}
 
+/* Media queries for mobile devices */
 .copyright {
   position: relative;
   left: 1000px;
@@ -334,7 +371,11 @@ table, th, td {
   font-size: 30px;
   margin: 5px 2px;
   padding: 10px;
-  color: #c32aa3;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+          /* Also define standard property for compatibility */
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .fa-snapchat {
@@ -371,7 +412,7 @@ table, th, td {
   .fa-twitter {
     position: relative;
     padding: 30px;
-    font-size: 40px;
+    font-size: 35px;
     width: 40px;
     left: 20px;
     bottom: 20px;
@@ -385,7 +426,7 @@ table, th, td {
   .fa-twitter {
     position: relative;
     padding: 30px;
-    font-size: 40px;
+    font-size: 35px;
     width: 40px;
     bottom: 15px;
     left: 10px;
@@ -399,7 +440,7 @@ table, th, td {
   .fa-twitter {
     position: relative;
     padding: 30px;
-    font-size: 30px;
+    font-size: 35px;
     width: 40px;
     left: 10px;
     top: 10px;
@@ -470,7 +511,7 @@ table, th, td {
   .fa-twitter {
     position: relative;
     padding: 25px;
-    font-size: 35px;
+    font-size: 29px;
     width: 50px;
     margin: 5px 2px;
     bottom: 5px;

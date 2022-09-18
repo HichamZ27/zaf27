@@ -1,68 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Website for Zakat Al Fitr" />
     <title>Zakat Al-Fitr 27</title>
-    <link rel="icon" type="image/x-icon" href="img/Zakat Al Fitr.png">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="img/Zakat Al Fitr.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
-<body>
+  <body>
+    <!-- Sidebar apparaît sur petits écrans quand on clique sur le menu hamburger -->
+    <div class="sidenav" id="mySidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="index.html" onclick="closeNav()" class="w3-bar-item w3-button"
+        ><i class="fa fa-home"></i> ACCUEIL</a
+      >
+      <a
+        href="warehouse.html"
+        onclick="closeNav()"
+        class="w3-bar-item w3-button"
+        ><i class="fa fa-warehouse"></i> DÉPÔTS</a
+      >
+      <a href="measures.html" onclick="closeNav()" class="w3-bar-item w3-button"
+        ><i class="fa fa-balance-scale"></i> MESURES</a
+      >
+      <a href="team.html" onclick="closeNav()" class="w3-bar-item w3-button"
+        ><i class="fa fa-users"></i> L'ÉQUIPE</a
+      >
+      <!-- <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a> -->
+    </div>
 
-  <!-- Sidebar apparaît sur petits écrans quand on clique sur le menu hamburger -->
-  <div class="sidenav" id="mySidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="index.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-home"></i> ACCUEIL</a>
-    <a href="warehouse.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-warehouse"></i> DÉPÔTS</a>
-    <a href="measures.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-balance-scale"></i> MESURES</a>
-    <a href="team.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-users"></i> L'ÉQUIPE</a>
-    <!-- <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a> -->
-  </div>
-  
-  <!-- Header avec une image full -->
-  <header class="bgimg-1 w3-display-container" class="responsive" id="home">
-    <!-- Navbar (on top) -->
-    <div class="container" id="myNavbar">
-      <div class="topnav">
-        <!-- Liens navbar côté droit -->
-        <div class="w3-right w3-hide-small">
-          <a href="index.html" class="active"><i class="fa fa-home"></i> ACCUEIL</a>
-          <a href="warehouse.html"><i class="fa fa-warehouse"></i> DÉPÔTS</a>
-          <a href="measures.html"><i class="fa fa-balance-scale"></i> MESURES</a>
-          <a href="team.html"><i class="fa fa-users"></i> L'ÉQUIPE</a>
+    <!-- Header avec une image full -->
+    <header class="bgimg-1 w3-display-container" class="responsive" id="home">
+      <!-- Navbar (on top) -->
+      <div class="container" id="myNavbar">
+        <div class="topnav">
+          <!-- Liens navbar côté droit -->
+          <div class="w3-right w3-hide-small">
+            <a href="index.html" class="active"
+              ><i class="fa fa-home"></i> ACCUEIL</a
+            >
+            <a href="warehouse.html"><i class="fa fa-warehouse"></i> DÉPÔTS</a>
+            <a href="measures.html"
+              ><i class="fa fa-balance-scale"></i> MESURES</a
+            >
+            <a href="team.html"><i class="fa fa-users"></i> L'ÉQUIPE</a>
+          </div>
+          <!-- Liens de nav cacher sur petits écrans et remplacer par le menu hamburger -->
+          <a
+            href="javascript:void(0)"
+            class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+            id="openbtn"
+            onclick="openNav()"
+            >&#9776;</a
+          >
         </div>
-        <!-- Liens de nav cacher sur petits écrans et remplacer par le menu hamburger -->
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" id="openbtn" onclick="openNav()">&#9776;</a>
+        <a
+          href="index.html"
+          class="w3-bar-item w3-button"
+          id="logo"
+          alt="Zakat Al Fitr 27"
+        ></a>
       </div>
-      <a href="index.html" class="w3-bar-item w3-button" id="logo" alt="App Zakat Al Fitr"></a>
-    </div>
 
-    
-    <div class="w3-display-left" style="padding:58px" id="home">
-      <span class="w3-xxlarge w3-hide-small">DÉPOSEZ VOTRE ZAKAT AL FITR, </span><br>
-      <span class="w3-xxxlarge w3-hide-small">NOUS LA DISTRIBUONS.</span>
-      <span class="w3-small w3-hide-large w3-hide-medium">DÉPOSEZ VOTRE ZAKAT AL FITR, </span><br>
-      <span class="w3-large w3-hide-large w3-hide-medium">NOUS LA DISTRIBUONS. </span><br>
-      <p><a href="contact.html" class="w3-button w3-green w3-hover-light-green w3-round-large w3-margin-top" id="cta">RECEVOIR VOTRE ZAKAT AL FITR</a></p>
-    </div> 
-    
-    <!-- Footer -->
-    <div class="w3-display-bottomleft w3-large-1" style="padding:24px 48px">
-      <a href="https://fr-fr.facebook.com/" target="_blank"><i class="fa-brands fa-facebook w3-hover-opacity"></i></a>
-      <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram w3-hover-opacity"></i></a>
-      <a href="https://accounts.snapchat.com/" target="_blank"><i class="fa-brands fa-snapchat w3-hover-opacity"></i></a>
-      <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter w3-hover-opacity"></i></a>
-      <footer class="w3-center w3-padding-158">
+      <div class="w3-display-left" style="padding: 58px" id="home">
+        <span class="w3-xxlarge w3-hide-small"
+          >DÉPOSEZ VOTRE ZAKAT AL FITR, </span
+        ><br />
+        <span class="w3-xxxlarge w3-hide-small">NOUS LA DISTRIBUONS.</span>
+        <span class="w3-small w3-hide-large w3-hide-medium"
+          >DÉPOSEZ VOTRE ZAKAT AL FITR, </span
+        ><br />
+        <span class="w3-large w3-hide-large w3-hide-medium"
+          >NOUS LA DISTRIBUONS. </span
+        ><br />
+        <p>
+          <a
+            href="contact.html"
+            class="w3-button w3-green w3-hover-light-green w3-round-large w3-margin-top"
+            id="cta"
+            >RECEVOIR VOTRE ZAKAT AL FITR</a
+          >
+        </p>
+      </div>
+
+      <!-- Footer inside the header-->
+      <div class="w3-display-bottomleft w3-large-1" style="padding: 24px 48px">
+        <a href="https://fr-fr.facebook.com/" target="_blank"
+          ><i class="fa-brands fa-facebook w3-hover-opacity"></i
+        ></a>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="fa-brands fa-instagram w3-hover-opacity"></i
+        ></a>
+        <a href="https://accounts.snapchat.com/" target="_blank"
+          ><i class="fa-brands fa-snapchat w3-hover-opacity"></i
+        ></a>
+        <a href="https://twitter.com/" target="_blank"
+          ><i class="fa-brands fa-twitter w3-hover-opacity"></i
+        ></a>
         <p class="copyright">&#169 Copyright 2022 - Tous droits réservés - Zakat Al Fitr 27</p>
-      </footer>
-    </div>
-  </header>
+      </div>
+    
 
-  <script src="main.js"></script>
+    </header>
 
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>

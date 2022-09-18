@@ -1,23 +1,43 @@
 [
 	{
 		"name": "Vernon",
-		"adress": "Boulevard Georges Azémia, 27200 Vernon",
-		"date": "Mardi 26 avril",
-		"hour": "14H30-17H30 puis 18H30-20H"
+		"adress": "non communiqué",
+		"date": "non communiqué",
+		"hour": "non communiqué"
+	},
+	
+	{
+		"name": "Gaillon",
+		"adress": "non communiqué",
+		"date": "non communiqué",
+		"hour": "non communiqué"
 	},
 
 	{
-		"name": "Vernon",
-		"adress": "Boulevard Georges Azémia, 27200 Vernon",
-		"date": "Mercredi 27 avril",
-		"hour": "14H30-17H30 puis 18H30-20H"
-	}, 
+		"name": "Louviers",
+		"adress": "non communiqué",
+		"date": "non communiqué",
+		"hour": "non communiqué"
+	},
 
 	{
-		"name": "Vernon",
-		"adress": "Boulevard Georges Azémia, 27200 Vernon",
-		"date": "Jedui 28 avril",
-		"hour": "14H30-17H30"
-	}
+		"name": "Les Andelys",
+		"adress": "non communiqué",
+		"date": "non communiqué",
+		"hour": "non communiqué"
+	},
 
+	{
+		"name": "Gisors",
+		"adress": "non communiqué",
+		"date": "non communiqué",
+		"hour": "non communiqué"
+	},
+
+	{
+		"name": "Evreux",
+		"adress": "non communiqué",
+		"date": "non communiqué",
+		"hour": "non communiqué"
+	}
 ]

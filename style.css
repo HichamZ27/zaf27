@@ -180,10 +180,9 @@ html {
     margin-bottom: 16px;
   }
 }
-
+ 
 .copyright {
   position: relative;
-  left: 1000px;
   color: #1d3557;
 }
 
@@ -225,15 +224,16 @@ html {
 
 @media screen and (max-width: 800px) {
   .copyright {
-    position: relative;
-    left: 10px;
+    position: center;
+    top: 10px;
   }
 }
 
 @media screen and (max-width: 428px) {
   .copyright {
     font-size: smaller;
-    position: center;
+    position: relative;
+    left: 5px;
     top: 10px;
   }
 }
@@ -241,35 +241,41 @@ html {
 @media screen and (max-width: 414px) {
   .copyright {
     font-size: x-small;
-    position: center;
+    position: relative;
+    left: 25px;
+
   }
 }
 
 @media screen and (max-width: 412px) {
   .copyright {
     font-size: x-small;
-    position: center;
+    position: relative;
+    left: 30px;
   }
 }
 
 @media screen and (max-width: 390px) {
   .copyright {
     font-size: x-small;
-    position: center;
+    position: relative;
+    left: 15px;
   }
 }
 
 @media screen and (max-width: 384px) {
   .copyright {
     font-size: x-small;
-    position: center;
+    position: relative;
+    left: 15px;
   }
 }
 
 @media screen and (max-width: 375px) {
   .copyright {
     font-size: x-small;
-    position: center;
+    position: relative;
+    left: 10px;
     top: 10px;
   }
 }
@@ -277,10 +283,11 @@ html {
 @media screen and (max-width: 360px) {
   .copyright {
     font-size: x-small;
-    position: center;
-    top: 20px;
+    position: relative;
+    left: 5px;
+    top: 15px;
   }
-}
+} 
 
 /* icons social network */
 .fa-facebook {
@@ -316,6 +323,19 @@ html {
 }
 
 /* Media queries for mobile devices */
+@media screen and (max-width: 810px) {
+  .fa-facebook,
+  .fa-instagram,
+  .fa-snapchat,
+  .fa-twitter {
+    position: relative;
+    font-size: 30px;
+    width: 40px;
+    left: 20px;
+    top: -40px;
+  }
+}
+
 @media screen and (max-width: 428px) {
   .fa-facebook,
   .fa-instagram,
@@ -354,7 +374,6 @@ html {
     font-size: 35px;
     width: 40px;
     left: 10px;
-    top: -60px;
   }
 }
 
@@ -396,7 +415,6 @@ html {
     padding: 30px;
     font-size: 35px;
     width: 40px;
-    top: -80px;
     left: 1px;
   }
 }
@@ -422,10 +440,9 @@ html {
   .fa-twitter {
     position: relative;
     padding: 25px;
-    font-size: 25px;
+    font-size: 29px;
     width: 50px;
     margin: 5px 2px;
-    top: -80px;
     left: 5px;
   }
 }
