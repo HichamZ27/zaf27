@@ -334,7 +334,7 @@ input[type=text] {
   .fa-twitter {
     position: relative;
     padding: 30px;
-    font-size: 40px;
+    font-size: 35px;
     width: 40px;
     left: 20px;
     bottom: 20px;
@@ -348,7 +348,7 @@ input[type=text] {
   .fa-twitter {
     position: relative;
     padding: 30px;
-    font-size: 40px;
+    font-size: 35px;
     width: 40px;
     bottom: 15px;
     left: 10px;
@@ -433,7 +433,7 @@ input[type=text] {
   .fa-twitter {
     position: relative;
     padding: 25px;
-    font-size: 35px;
+    font-size: 29px;
     width: 50px;
     margin: 5px 2px;
     bottom: 5px;
@@ -553,4 +553,14 @@ p {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Footer */
+@media only screen and (min-width: 800px) and (max-width : 1920px)
+{
+.bgimg-2{
+  background-position: center;
+  background-image: url("img/Footer.png");
+  background-repeat: no-repeat;
+  }
 }
