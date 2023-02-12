@@ -51,7 +51,7 @@ html {
   margin-left: 50px;
 }
 
-#openbtn{
+#openbtn {
   color: #ef7d39;
   font-size: 20px;
 }
@@ -115,12 +115,13 @@ html {
   width: 100%;
 }
 
-.active, .a:hover {
+.active,
+.a:hover {
   border-bottom: 2px solid #ef7d39;
 }
 
-input[type=text] {
-  font-size: 1rem;                                                                                                                                                                                                                                                                                                                              
+input[type="text"] {
+  font-size: 1rem;
 }
 
 /* Button in the navbar */
@@ -140,8 +141,8 @@ input[type=text] {
 }
 
 .button1 {
-  background-color: transparent; 
-  color: #1d3557; 
+  background-color: transparent;
+  color: #1d3557;
   border: 2px solid #1d3557;
 }
 
@@ -157,16 +158,16 @@ input[type=text] {
   background-image: url("img/Page\ 2\ Depots.png");
   background-size: cover;
   min-height: 100%;
-}                                        
+}
 
 /* Media queries for mobile devices */
-@media only screen and (min-width: 800px)  and (max-width: 1920px){
+@media only screen and (min-width: 800px) and (max-width: 1920px) {
   .bgimg-1 {
     background-image: url("img/Page\ 2\ Depots.png");
   }
 }
 
-@media only screen and (min-width : 360px) and (max-width : 428px){
+@media only screen and (min-width: 360px) and (max-width: 428px) {
   .bgimg-1 {
     background-image: url("img/Page\ 2\ Responsive.png");
   }
@@ -289,10 +290,17 @@ input[type=text] {
   font-size: 30px;
   margin: 5px 2px;
   padding: 10px;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
   -webkit-background-clip: text;
-          /* Also define standard property for compatibility */
-          background-clip: text;
+  /* Also define standard property for compatibility */
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -443,12 +451,13 @@ input[type=text] {
 .text-1 {
   text-align: justify;
   text-justify: inter-word;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: #1D3557;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #1d3557;
 }
 
 hr.new1 {
-  border: 3px solid #DCAD0D;
+  border: 3px solid #dcad0d;
   width: 80%;
   position: relative;
   left: 22%;
@@ -456,23 +465,23 @@ hr.new1 {
 }
 
 hr.new2 {
-  border: 3px solid #DCAD0D;
+  border: 3px solid #dcad0d;
   width: 40%;
   position: relative;
   right: 2%;
   bottom: 10px;
 }
 
-hr.new3 {
+/* hr.new3 {
   border: 3px solid #DCAD0D;
   width: 80%;
   position: relative;
   right: 2%;
   bottom: 650px;
-}
+} */
 
 .vl {
-  border-left: 6px solid #DCAD0D;
+  border-left: 6px solid #dcad0d;
   height: 200px;
   position: relative;
   left: 102%;
@@ -480,11 +489,21 @@ hr.new3 {
 }
 
 .vl1 {
-  border-left: 6px solid #DCAD0D;
+  border-left: 6px solid #dcad0d;
   height: 300px;
   position: relative;
   right: 2%;
   bottom: 330px;
+}
+
+/* Media queries for mobile devices */
+@media only screen and (min-width: 360px) and (max-width: 428px) {
+  hr.new1,
+  hr.new2,
+  .vl,
+  .vl1 {
+    display: none;
+  }
 }
 
 .container-team {
@@ -496,15 +515,16 @@ hr.new3 {
 /* Countdown */
 .container-countdown {
   position: relative;
-  top: 100px;
-  color: #1D3557;
+  top: 10px;
+  color: #1d3557;
   text-align: center;
   align-items: center;
+  width: 100%;
 }
 
 h1 {
   font-weight: normal;
-  letter-spacing: .125rem;
+  letter-spacing: 0.125rem;
   text-transform: uppercase;
 }
 
@@ -521,31 +541,31 @@ li span {
   font-size: 4.5rem;
 }
 
-#days{
-  color: #DCAD0D;
-} 
+#days {
+  color: #dcad0d;
+}
 
-#hours{
-  color: #DCAD0D;
-} 
+#hours {
+  color: #dcad0d;
+}
 
-#minutes{
-  color: #DCAD0D;
-} 
+#minutes {
+  color: #dcad0d;
+}
 
-#seconds{
-  color: #DCAD0D;
-} 
+#seconds {
+  color: #dcad0d;
+}
 
 @media screen and (max-width: 768px) {
   h1 {
     font-size: calc(1.5rem * var(--smaller));
   }
-  
+
   li {
     font-size: calc(1.125rem * var(--smaller));
   }
-  
+
   li span {
     font-size: calc(3.375rem * var(--smaller));
   }

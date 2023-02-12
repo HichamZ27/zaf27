@@ -51,7 +51,7 @@ html {
   margin-left: 50px;
 }
 
-#openbtn{
+#openbtn {
   color: #ef7d39;
   font-size: 20px;
 }
@@ -115,12 +115,13 @@ html {
   width: 100%;
 }
 
-.active, .a:hover {
+.active,
+.a:hover {
   border-bottom: 2px solid #ef7d39;
 }
 
-input[type=text] {
-  font-size: 1rem;                                                                                                                                                                                                                                                                                                                              
+input[type="text"] {
+  font-size: 1rem;
 }
 
 /* Full height image header */
@@ -130,17 +131,16 @@ input[type=text] {
   background-image: url("img/Page\ 2\ Depots.png");
   background-size: cover;
   min-height: 100%;
-}                                        
+}
 
 /* Media queries for mobile devices */
-@media only screen and (min-width: 800px)  and (max-width: 1920px){
+@media only screen and (min-width: 800px) and (max-width: 1920px) {
   .bgimg-1 {
     background-image: url("img/Page\ 2\ Depots.png");
   }
 }
 
-
-@media only screen and (min-width : 360px) and (max-width : 428px){
+@media only screen and (min-width: 360px) and (max-width: 428px) {
   .bgimg-1 {
     background-image: url("img/Page\ 2\ Responsive.png");
   }
@@ -189,7 +189,7 @@ input[type=text] {
   .copyright {
     position: relative;
     left: 180px;
-    top: -15px
+    top: -15px;
   }
 }
 
@@ -197,7 +197,7 @@ input[type=text] {
   .copyright {
     position: relative;
     left: 150px;
-    top: -18px
+    top: -18px;
   }
 }
 
@@ -275,7 +275,18 @@ input[type=text] {
   font-size: 30px;
   margin: 5px 2px;
   padding: 10px;
-  color: #c32aa3;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  /* Also define standard property for compatibility */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .fa-snapchat {
@@ -423,7 +434,7 @@ input[type=text] {
 
 /* Section Contact */
 u {
-  color: #DCAD0D
+  color: #dcad0d;
 }
 
 input[type="text"],
@@ -435,17 +446,17 @@ textarea {
   outline: none;
   padding: 12px 30px;
   border-bottom: 1px solid gray;
-  color: #1D3557;
+  color: #1d3557;
   font-size: 18px;
   margin-bottom: 16px;
 }
 
 ::placeholder {
-  color: #1D3557;
+  color: #1d3557;
 }
 
 input[type="submit"] {
-  background-color: #DCAD0D;
+  background-color: #dcad0d;
   color: white;
   padding: 12px 30px;
   border-radius: 4px;
@@ -453,7 +464,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #DCAD0D;
+  background-color: #dcad0d;
 }
 
 .container-contact {
@@ -497,7 +508,7 @@ input[type="submit"]:hover {
   border-radius: 4px;
 }
 #status.success {
-  background-color: #DCAD0D;
+  background-color: #dcad0d;
   animation: status 6s ease forwards;
 }
 
@@ -520,4 +531,3 @@ input[type="submit"]:hover {
     pointer-events: none;
   }
 }
-  
