@@ -438,6 +438,7 @@ u {
 }
 
 input[type="text"],
+input[type="tel"],
 select,
 textarea {
   width: 40%;
@@ -492,6 +493,7 @@ input[type="submit"]:hover {
   .col-75,
   input[type="submit"] .col-75,
   input[type="text"],
+  input[type="tel"],
   select,
   textarea {
     width: 100%;
