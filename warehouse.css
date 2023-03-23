@@ -51,7 +51,7 @@ html {
   margin-left: 50px;
 }
 
-#openbtn{
+#openbtn {
   color: #ef7d39;
   font-size: 20px;
 }
@@ -115,41 +115,42 @@ html {
   width: 100%;
 }
 
-.active, .a:hover {
+.active,
+.a:hover {
   border-bottom: 2px solid #ef7d39;
 }
 
-input[type=text] {
-  font-size: 1rem;                                                                                                                                                                                                                                                                                                                              
+input[type="text"] {
+  font-size: 1rem;
 }
 
 /* Button in the navbar */
 .button {
-    background-color: #1d3557;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    /* padding: 16px 32px; */
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    margin: 25px 40px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-  }
+  background-color: #1d3557;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  /* padding: 16px 32px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 25px 40px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
 
-  .button1 {
-    background-color: transparent; 
-    color: #1d3557; 
-    border: 2px solid #1d3557;
-  }
+.button1 {
+  background-color: transparent;
+  color: #1d3557;
+  border: 2px solid #1d3557;
+}
 
-  .button1:hover {
-    background-color: #1d3557;
-    color: white;
-  }
-  
+.button1:hover {
+  background-color: #1d3557;
+  color: white;
+}
+
 /* Full height image header */
 .bgimg-1 {
   background-position: center;
@@ -157,40 +158,40 @@ input[type=text] {
   background-image: url("img/Page\ 2\ Depots.png");
   background-size: cover;
   min-height: 100%;
-}                                        
+}
 
 /* Media queries for mobile devices */
-@media only screen and (min-width: 800px)  and (max-width: 1920px){
+@media only screen and (min-width: 800px) and (max-width: 1920px) {
   .bgimg-1 {
     background-image: url("img/Page\ 2\ Depots.png");
   }
 }
 
-@media only screen and (min-width : 360px) and (max-width : 428px){
+@media only screen and (min-width: 360px) and (max-width: 428px) {
   .bgimg-1 {
     background-image: url("img/Page\ 2\ Responsive.png");
   }
 }
 
 /*search bar */
-::placeholder{
+::placeholder {
   color: #1d3557;
   font-size: 100%;
 }
 
-.fa-search{
-  color: #EF7D39;
+.fa-search {
+  color: #ef7d39;
   font-size: 30px;
 }
 
-.input-wrapper{
+.input-wrapper {
   position: relative;
   padding: 12px 30px;
   display: flex;
   align-items: center;
   font-size: 18px;
   width: 20%;
-  background: #2EB467;
+  background: #2eb467;
   opacity: 0.7;
   border-radius: 0.5rem;
   margin-bottom: 16px;
@@ -202,13 +203,15 @@ input[type="text"] {
   width: 100%;
   border: none;
   outline: none;
-  background: #2EB467;
+  background: #2eb467;
 }
 
-table, th, td {
-  border: 2px solid #1D3557;
+table,
+th,
+td {
+  border: 2px solid #1d3557;
   border-collapse: collapse;
-  color: #1D3557;
+  color: #1d3557;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -224,8 +227,7 @@ table, th, td {
   text-align: center;
 }
 
-@media only screen and (min-width : 360px) and (max-width : 428px)
-{
+@media only screen and (min-width: 360px) and (max-width: 428px) {
   .input[type="text"],
   .input-wrapper {
     bottom: 30px;
@@ -233,21 +235,19 @@ table, th, td {
   }
 }
 
-@media only screen and (min-width : 800px) and (max-width : 1920px)
-{
+@media only screen and (min-width: 800px) and (max-width: 1920px) {
   .input[type="text"],
   .input-wrapper {
     width: 50%;
-	}
+  }
 }
 
 /* Footer */
-@media only screen and (min-width: 800px) and (max-width : 1920px)
-{
-.bgimg-2{
-  background-position: center;
-  background-image: url("img/Footer.png");
-  background-repeat: no-repeat;
+@media only screen and (min-width: 800px) and (max-width: 1920px) {
+  .bgimg-2 {
+    background-position: center;
+    /* background-image: url("img/Footer.png"); */
+    background-repeat: no-repeat;
   }
 }
 
@@ -371,10 +371,17 @@ table, th, td {
   font-size: 30px;
   margin: 5px 2px;
   padding: 10px;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
   -webkit-background-clip: text;
-          /* Also define standard property for compatibility */
-          background-clip: text;
+  /* Also define standard property for compatibility */
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

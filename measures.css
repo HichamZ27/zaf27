@@ -51,7 +51,7 @@ html {
   margin-left: 50px;
 }
 
-#openbtn{
+#openbtn {
   color: #ef7d39;
   font-size: 20px;
 }
@@ -115,12 +115,13 @@ html {
   width: 100%;
 }
 
-.active, .a:hover {
+.active,
+.a:hover {
   border-bottom: 2px solid #ef7d39;
 }
 
-input[type=text] {
-  font-size: 1rem;                                                                                                                                                                                                                                                                                                                              
+input[type="text"] {
+  font-size: 1rem;
 }
 
 /* Button in the navbar */
@@ -140,8 +141,8 @@ input[type=text] {
 }
 
 .button1 {
-  background-color: transparent; 
-  color: #1d3557; 
+  background-color: transparent;
+  color: #1d3557;
   border: 2px solid #1d3557;
 }
 
@@ -157,16 +158,16 @@ input[type=text] {
   background-image: url("img/Page\ 2\ Depots.png");
   background-size: cover;
   min-height: 100%;
-}                                        
+}
 
 /* Media queries for mobile devices */
-@media only screen and (min-width: 800px)  and (max-width: 1920px){
+@media only screen and (min-width: 800px) and (max-width: 1920px) {
   .bgimg-1 {
     background-image: url("img/Page\ 2\ Depots.png");
   }
 }
 
-@media only screen and (min-width : 360px) and (max-width : 428px){
+@media only screen and (min-width: 360px) and (max-width: 428px) {
   .bgimg-1 {
     background-image: url("img/Page\ 2\ Responsive.png");
   }
@@ -291,10 +292,17 @@ input[type=text] {
   font-size: 30px;
   margin: 5px 2px;
   padding: 10px;
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
   -webkit-background-clip: text;
-          /* Also define standard property for compatibility */
-          background-clip: text;
+  /* Also define standard property for compatibility */
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -442,26 +450,26 @@ input[type=text] {
 }
 
 /* Measures page */
-@media only screen and (min-width : 800px) and (max-width : 1920px){
-  #myImg{
-  width: 30%;
+@media only screen and (min-width: 800px) and (max-width: 1920px) {
+  #myImg {
+    width: 30%;
   }
 }
 
 @media screen and (max-width: 810px) {
-  #myImg{
+  #myImg {
     width: 55%;
-  } 
+  }
 }
 
-@media only screen and (min-width : 360px) and (max-width : 428px){
-  #myImg{
-  width: 80%;
+@media only screen and (min-width: 360px) and (max-width: 428px) {
+  #myImg {
+    width: 80%;
   }
 }
 
 p {
-  color: #1D3557;
+  color: #1d3557;
   text-align: center;
 }
 
@@ -473,7 +481,7 @@ p {
   top: 40px;
   max-width: 80%;
   height: auto;
-} 
+}
 
 #myImg {
   cursor: pointer;
@@ -481,7 +489,9 @@ p {
   border-radius: 8px;
 }
 
-#myImg:hover {opacity: 0.7;}
+#myImg:hover {
+  opacity: 0.7;
+}
 
 /* The Modal (background) */
 .modal {
@@ -494,8 +504,8 @@ p {
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
@@ -520,7 +530,8 @@ p {
 }
 
 /* Add Animation */
-.modal-content, #caption {  
+.modal-content,
+#caption {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -528,13 +539,21 @@ p {
 }
 
 @-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
 }
 
 @keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* The Close Button */
@@ -556,11 +575,11 @@ p {
 }
 
 /* Footer */
-@media only screen and (min-width: 800px) and (max-width : 1920px)
+/* @media only screen and (min-width: 800px) and (max-width : 1920px)
 {
 .bgimg-2{
   background-position: center;
   background-image: url("img/Footer.png");
   background-repeat: no-repeat;
   }
-}
+} */

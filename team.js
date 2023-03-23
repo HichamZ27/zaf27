@@ -8,7 +8,7 @@ function closeNav() {
 }
 
 // Code Team page
-(function () {
+(function() {
   const second = 1000,
     minute = second * 60,
     hour = minute * 60,
@@ -21,7 +21,7 @@ function closeNav() {
     mm = String(today.getMonth() + 1).padStart(2, "0"),
     yyyy = today.getFullYear(),
     nextYear = yyyy + 1,
-    dayMonth = "04/30/",
+    dayMonth = "04/21/",
     birthday = dayMonth + yyyy;
 
   today = mm + "/" + dd + "/" + yyyy;
@@ -31,7 +31,7 @@ function closeNav() {
   //end
 
   const countDown = new Date(birthday).getTime(),
-    x = setInterval(function () {
+    x = setInterval(function() {
       const now = new Date().getTime(),
         distance = countDown - now;
 
