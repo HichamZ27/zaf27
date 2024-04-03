@@ -59,7 +59,8 @@ html {
 /* Logo */
 #logo {
   background-position: center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-image: url("img/Zakat\ Al\ Fitr.png");
   position: absolute;
   top: 30px;
