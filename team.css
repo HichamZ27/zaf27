@@ -11,7 +11,7 @@ h6 {
 body,
 html {
   height: 100%;
-  line-height: 1.8;
+  /* line-height: 1.8; */
 }
 
 /* Barre latérale s'ouvre à droite */
