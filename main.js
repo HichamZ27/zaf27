@@ -7,6 +7,13 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
 
+// Code for pop-up Youtube
+window.onload = function () {
+  Fancybox.show([
+    { src: "https://youtu.be/v3tu9_q0hbM?feature=shared", type: "iframe" },
+  ]);
+};
+
 // Code for search bar
 
 // Déclaration des constantes

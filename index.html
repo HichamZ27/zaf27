@@ -11,14 +11,16 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Raleway"
     />
+  </head>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.css" />
   </head>
 
-  <body>    
+  <body>
     <!-- Sidebar apparaît sur petits écrans quand on clique sur le menu hamburger -->
     <div class="sidenav" id="mySidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
@@ -74,7 +76,8 @@
           alt="Zakat Al-Fitr 27"
         ></a>
       </div>
-
+      
+      
       <div class="w3-display-left" style="padding: 58px" id="home">
         <span class="w3-xxlarge w3-hide-small"
           >DÉPOSEZ VOTRE ZAKAT AL FITR, </span
@@ -96,6 +99,10 @@
         </p>
       </div>
 
+      <!-- Pop-up Youtube vidéo -->
+      <a data-fancybox href="https://youtu.be/v3tu9_q0hbM?feature=shared"></a>
+
+    
       <!-- Footer inside the header-->
       <div class="w3-display-bottomleft w3-large-1" style="padding: 24px 48px">
         <a href="https://www.facebook.com/profile.php?id=100090586256162" target="_blank"
@@ -115,5 +122,7 @@
     </header>
 
     <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.umd.js"></script>
+
   </body>
 </html>
