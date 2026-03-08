@@ -1,3 +1,12 @@
+/* ========================
+   BASE
+======================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body,
 h1,
 h2,
@@ -12,30 +21,34 @@ body,
 html {
   height: 100%;
   line-height: 1.8;
+  margin: 0;
+  padding: 0;
 }
 
-/* Barre latérale s'ouvre à droite */
+/* ========================
+   SIDEBAR
+======================== */
 .sidenav {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   top: 0;
-  right: 0px;
-  background-color: #111;
+  right: 0;
+  background-color: rgba(17, 17, 17, 0.92);
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: width 0.4s ease;
   padding-top: 100px;
-  opacity: 0.8;
 }
 
 .sidenav a {
-  padding: 18px 18px 18px 18px;
+  padding: 18px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 22px;
   color: #ef7d39;
   display: block;
-  transition: 0.3s;
+  transition: color 0.3s;
+  white-space: nowrap;
 }
 
 .sidenav a:hover {
@@ -43,263 +56,186 @@ html {
 }
 
 .sidenav .closebtn {
-  color: #ef7d39;
   position: absolute;
   top: 0;
-  right: 25px;
-  font-size: 56px;
-  margin-left: 50px;
+  right: 20px;
+  font-size: 52px;
+  padding: 0;
+  line-height: 1.2;
 }
 
-#openbtn {
+/* ========================
+   HAMBURGER BUTTON
+======================== */
+.hamburger {
+  background: none;
+  border: none;
   color: #ef7d39;
-  font-size: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px 16px;
+  float: right;
 }
 
-/* Logo */
-#logo {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("img/Zakat\ Al\ Fitr.png");
+/* ========================
+   LOGO
+======================== */
+.logo {
+  background: url("img/Zakat\ Al\ Fitr.png") center / contain no-repeat;
   position: absolute;
-  top: 30px;
-  left: 50px;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
+  top: 20px;
+  left: 40px;
+  width: 90px;
+  height: 90px;
+  display: block;
+  transition: opacity 0.2s;
 }
 
-#logo:hover {
+.logo:hover {
   opacity: 0.8;
 }
 
-/* Position the navbar container inside the image */
+/* ============================================================
+      NAVBAR
+      ============================================================ */
 .container {
   position: relative;
-  width: auto;
+  width: 100%;
 }
 
-/* The navbar */
 .topnav {
   overflow: hidden;
 }
 
-/* Navbar links */
 .topnav a {
   float: left;
   color: #1d3557;
   text-align: center;
-  padding: 34px 36px;
+  padding: 34px 28px;
   text-decoration: none;
-  font-size: 15px;
-  border-bottom: 2px solid transparent;
+  font-size: 14px;
+  position: relative;
 }
 
-.topnav a:before {
+/* Underline animation */
+.topnav a::after {
   content: "";
   display: block;
-  position: relative;
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
   width: 0;
-  top: 2em;
   border-bottom: 2px solid #ef7d39;
   transition: width 0.4s;
 }
 
+.topnav a:hover::after,
+.topnav a.active::after {
+  width: calc(100% - 56px);
+}
+
 .topnav a:hover {
-  height: 1px;
   opacity: 0.7;
-  text-align: left;
 }
 
-.topnav a:hover:before {
-  width: 100%;
-}
-
-/* Full height image header */
+/* ========================
+   HERO / HEADER
+======================== */
 .bgimg-1 {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("img/Page\ 1\ Accueil.png");
-  background-size: cover;
-  min-height: 100%;
-}
-
-.closebtn {
-  color: #ef7d39;
-}
-
-/* Media queries for mobile devices */
-@media only screen and (min-width: 800px) and (max-width: 1920px) {
-  .bgimg-1 {
-    background-image: url("img/Page\ 1\ Accueil.png");
-  }
-}
-
-@media only screen and (min-width: 360px) and (max-width: 428px) {
-  .bgimg-1 {
-    background-image: url("img/Page\ 1.png");
-  }
-}
-
-.w3-xxlarge {
-  color: #1d3557;
-  font-weight: lighter;
-}
-
-.w3-xxxlarge {
-  color: #1d3557;
-  font-weight: bold;
-}
-
-.w3-small {
-  color: #1d3557;
-  font-weight: lighter;
-  width: 100%;
-  margin-top: 0;
-  padding: 12px 30px;
-  margin-bottom: 16px;
-}
-
-.w3-large {
-  color: #1d3557;
-  font-weight: bold;
-  width: 100%;
-  margin-top: 0;
-  padding: 12px 30px;
-  margin-bottom: 16px;
-}
-
-/* Media queries for mobile devices */
-@media screen and (max-width: 600px) {
-  .w3-small,
-  .w3-large,
-  #cta {
-    width: 100%;
-    margin-top: 0;
-    padding: 12px 20px;
-    margin-bottom: 16px;
-  }
-}
-
-.copyright {
+  background: url("img/Page\ 1\ Accueil.png") center / cover no-repeat;
+  min-height: 100vh;
   position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text {
+  padding: 80px 60px 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+  max-width: 700px;
+}
+
+.hero-sub {
   color: #1d3557;
+  font-weight: 300;
+  font-size: 1.5rem;
+  display: block;
 }
 
-/* Media queries for mobile devices */
-@media screen and (max-width: 1920px) {
+.hero-title {
+  color: #1d3557;
+  font-weight: 700;
+  font-size: 2.5rem;
+  display: block;
+}
+
+.hero-title-sm {
+  color: #1d3557;
+  font-weight: 700;
+  font-size: 1.6rem;
+  display: block;
+}
+
+/* CTA button */
+#cta {
+  display: inline-block;
+  margin-top: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 16px 48px;
+  gap: 8px;
+  position: relative;
+}
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.footer-icons a {
+  text-decoration: none;
+}
+.copyright {
+  color: #1d3557;
+  margin: 0;
+  text-align: center;
+  font-size: 0.85rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 600px) {
+  .site-footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 24px;
+    position: static;
+  }
   .copyright {
-    position: relative;
-    left: 700px;
+    text-align: center;
+    font-size: 0.75rem;
+    position: static;
+    transform: none;
   }
 }
 
-@media screen and (max-width: 1440px) {
-  .copyright {
-    position: relative;
-    left: 500px;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .copyright {
-    position: relative;
-    left: 400px;
-  }
-}
-
-@media screen and (max-width: 1080px) {
-  .copyright {
-    position: relative;
-    left: 310px;
-  }
-}
-
-@media screen and (max-width: 810px) {
-  .copyright {
-    position: relative;
-    left: 180px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .copyright {
-    position: center;
-    top: 10px;
-  }
-}
-
-@media screen and (max-width: 428px) {
-  .copyright {
-    font-size: smaller;
-    position: relative;
-    left: 5px;
-    top: 10px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  .copyright {
-    font-size: x-small;
-    position: relative;
-    left: 25px;
-  }
-}
-
-@media screen and (max-width: 412px) {
-  .copyright {
-    font-size: x-small;
-    position: relative;
-    left: 30px;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .copyright {
-    font-size: x-small;
-    position: relative;
-    left: 15px;
-  }
-}
-
-@media screen and (max-width: 384px) {
-  .copyright {
-    font-size: x-small;
-    position: relative;
-    left: 15px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .copyright {
-    font-size: x-small;
-    position: relative;
-    left: 10px;
-    top: 10px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .copyright {
-    font-size: x-small;
-    position: relative;
-    left: 5px;
-    top: 15px;
-  }
-}
-
-/* icons social network */
+/* ===== SOCIAL ICONS ===== */
 .fa-facebook {
   font-size: 30px;
-  margin: 5px 2px;
   padding: 10px;
   color: #3b5998;
 }
 
 .fa-instagram {
   font-size: 30px;
-  margin: 5px 2px;
   padding: 10px;
   background: radial-gradient(
     circle at 30% 107%,
@@ -310,146 +246,126 @@ html {
     #285aeb 90%
   );
   -webkit-background-clip: text;
-  /* Also define standard property for compatibility */
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.fa-snapchat {
-  font-size: 30px;
-  margin: 5px 2px;
-  padding: 10px;
-  color: #fffc00;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-.fa-twitter {
-  font-size: 30px;
-  margin: 5px 2px;
-  padding: 10px;
-  color: #1da1f2;
-}
+/* ========================
+   RESPONSIVE — TABLETTE (601px – 1024px)
+======================== */
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .bgimg-1 {
+    background-image: url("img/Page\ 1\ Accueil.png");
+  }
 
-/* Media queries for mobile devices */
-@media screen and (max-width: 810px) {
-  .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    font-size: 30px;
-    width: 40px;
-    left: 20px;
-    top: -40px;
+  .logo {
+    top: 16px;
+    left: 24px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .hero-text {
+    padding: 60px 40px 30px;
+    max-width: 90%;
+  }
+
+  .hero-sub {
+    font-size: 1.2rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .header-footer {
+    padding: 12px 24px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .copyright {
+    margin-left: 0;
   }
 }
 
-@media screen and (max-width: 428px) {
+/* ========================
+   RESPONSIVE — MOBILE (≤ 600px)
+======================== */
+@media screen and (max-width: 600px) {
+  .bgimg-1 {
+    background-image: url("img/Page\ 1.png");
+    min-height: 100dvh;
+  }
+
+  .logo {
+    top: 12px;
+    left: 16px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .hero-text {
+    padding: 20px 20px 16px;
+    max-width: 100%;
+    margin-top: 90px;
+  }
+
+  .hero-sub,
+  .hero-title,
+  .hero-title-sm {
+    display: block;
+    width: 100%;
+  }
+
+  .hero-title-sm {
+    font-size: 1.4rem;
+  }
+
+  #cta {
+    width: 100%;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 12px 16px;
+  }
+
+  .header-footer {
+    padding: 10px 16px 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
   .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    padding: 30px;
-    font-size: 35px;
-    width: 40px;
-    left: 20px;
-    top: -80px;
+  .fa-instagram {
+    font-size: 26px;
+    padding: 6px;
+  }
+
+  .copyright {
+    font-size: 0.7rem;
+    margin-left: 0;
   }
 }
 
-@media screen and (max-width: 414px) {
-  .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    padding: 30px;
-    font-size: 35px;
-    width: 40px;
-    top: -80px;
-    left: 10px;
-  }
-}
-
-@media screen and (max-width: 412px) {
-  .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    padding: 30px;
-    font-size: 35px;
-    width: 40px;
-    left: 10px;
-  }
-}
-
-@media screen and (max-width: 411px) {
-  .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    padding: 30px;
-    font-size: 35px;
-    width: 40px;
-    left: 10px;
-    top: -50px;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    padding: 30px;
-    font-size: 35px;
-    width: 50px;
-    margin: 5px 2px;
-    top: -80px;
-    left: 1px;
-  }
-}
-
-@media screen and (max-width: 384px) {
-  .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    padding: 30px;
-    font-size: 35px;
-    width: 40px;
-    left: 1px;
-  }
-}
-
+/* ========================
+   RESPONSIVE — PETITS MOBILES (≤ 375px)
+======================== */
 @media screen and (max-width: 375px) {
-  .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    padding: 30px;
-    font-size: 35px;
-    width: 50px;
-    top: -30px;
-    left: -10px;
+  .hero-text {
+    padding: 16px 14px;
+    margin-top: 80px;
   }
-}
 
-@media screen and (max-width: 360px) {
-  .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    padding: 25px;
-    font-size: 29px;
-    width: 50px;
-    margin: 5px 2px;
-    left: 5px;
+  .hero-title-sm {
+    font-size: 1.2rem;
+  }
+
+  #cta {
+    font-size: 0.78rem;
+  }
+
+  .copyright {
+    font-size: 0.65rem;
   }
 }

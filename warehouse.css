@@ -1,3 +1,12 @@
+/* ===========================
+   BASE
+=========================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body,
 h1,
 h2,
@@ -11,31 +20,35 @@ h6 {
 body,
 html {
   height: 100%;
+  margin: 0;
+  padding: 0;
   line-height: 1.8;
 }
 
-/* Barre latérale s'ouvre à droite */
+/* ===========================
+   SIDENAV
+=========================== */
 .sidenav {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   top: 0;
-  right: 0px;
-  background-color: #111;
+  right: 0;
+  background-color: rgba(17, 17, 17, 0.9);
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: width 0.5s ease;
   padding-top: 100px;
-  opacity: 0.8;
 }
 
 .sidenav a {
-  padding: 18px 18px 18px 18px;
+  padding: 18px;
   text-decoration: none;
   font-size: 25px;
   color: #ef7d39;
   display: block;
-  transition: 0.3s;
+  transition: color 0.3s;
+  white-space: nowrap;
 }
 
 .sidenav a:hover {
@@ -43,101 +56,95 @@ html {
 }
 
 .sidenav .closebtn {
-  color: #ef7d39;
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 56px;
-  margin-left: 50px;
 }
 
+/* ===========================
+   NAVBAR OPEN BUTTON
+=========================== */
 #openbtn {
   color: #ef7d39;
   font-size: 20px;
 }
 
-/* Logo */
+/* ===========================
+   LOGO
+=========================== */
 #logo {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-image: url("img/Zakat\ Al\ Fitr.png");
+  display: block;
   position: absolute;
   top: 30px;
   left: 50px;
   width: 100px;
   height: 100px;
-  overflow: hidden;
+  background: url("img/Zakat Al Fitr.png") center / contain no-repeat;
+  transition: opacity 0.3s;
 }
 
 #logo:hover {
   opacity: 0.8;
 }
 
-/* Position the navbar container inside the image */
+/* ============================================================
+      NAVBAR
+      ============================================================ */
 .container {
   position: relative;
-  width: auto;
+  width: 100%;
 }
 
-/* The navbar */
 .topnav {
   overflow: hidden;
 }
 
-/* Navbar links */
 .topnav a {
   float: left;
   color: #1d3557;
   text-align: center;
-  padding: 34px 36px;
+  padding: 34px 28px;
   text-decoration: none;
-  font-size: 15px;
-  border-bottom: 2px solid transparent;
+  font-size: 14px;
+  position: relative;
 }
 
-.topnav a:before {
+/* Underline animation */
+.topnav a::after {
   content: "";
   display: block;
-  position: relative;
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
   width: 0;
-  top: 2em;
   border-bottom: 2px solid #ef7d39;
   transition: width 0.4s;
 }
 
+.topnav a:hover::after,
+.topnav a.active::after {
+  width: calc(100% - 56px);
+}
+
 .topnav a:hover {
-  height: 1px;
   opacity: 0.7;
-  text-align: left;
 }
 
-.topnav a:hover:before {
-  width: 100%;
-}
-
-.active,
-.a:hover {
-  border-bottom: 2px solid #ef7d39;
-}
-
-input[type="text"] {
-  font-size: 1rem;
-}
-
-/* Button in the navbar */
+/* ===========================
+   BUTTON
+=========================== */
 .button {
   background-color: #1d3557;
   border-radius: 5px;
   border: none;
   color: white;
-  /* padding: 16px 32px; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 12px;
   margin: 25px 40px;
-  transition-duration: 0.4s;
+  transition: background-color 0.4s, color 0.4s;
   cursor: pointer;
 }
 
@@ -148,33 +155,22 @@ input[type="text"] {
 }
 
 .button1:hover {
-  background-color: #1d3557;
+  background: linear-gradient(135deg, #1d3557, #457b9d);
   color: white;
 }
 
-/* Full height image header */
+/* ===========================
+   HERO IMAGE
+=========================== */
 .bgimg-1 {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("img/Page\ 2\ Depots.png");
-  background-size: cover;
-  min-height: 100%;
+  background: url("img/Page 2 Depots.png") center / cover no-repeat;
+  min-height: 100vh;
+  position: relative;
 }
 
-/* Media queries for mobile devices */
-@media only screen and (min-width: 800px) and (max-width: 1920px) {
-  .bgimg-1 {
-    background-image: url("img/Page\ 2\ Depots.png");
-  }
-}
-
-@media only screen and (min-width: 360px) and (max-width: 428px) {
-  .bgimg-1 {
-    background-image: url("img/Page\ 2\ Responsive.png");
-  }
-}
-
-/*search bar */
+/* ===========================
+   SEARCH BAR
+=========================== */
 ::placeholder {
   color: #1d3557;
   font-size: 100%;
@@ -183,30 +179,35 @@ input[type="text"] {
 .fa-search {
   color: #ef7d39;
   font-size: 30px;
+  flex-shrink: 0;
 }
 
 .input-wrapper {
-  position: relative;
-  padding: 12px 30px;
   display: flex;
   align-items: center;
+  gap: 8px;
+  padding: 12px 30px;
   font-size: 18px;
-  width: 20%;
-  background: #2eb467;
-  opacity: 0.7;
+  width: 40%;
+  max-width: 600px;
+  min-width: 260px;
+  background: rgba(46, 180, 103, 0.7);
   border-radius: 0.5rem;
-  margin-bottom: 16px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 16px;
 }
 
 input[type="text"] {
   width: 100%;
   border: none;
   outline: none;
-  background: #2eb467;
+  background: transparent;
+  font-size: 1rem;
+  color: #1d3557;
 }
 
+/* ===========================
+   TABLE
+=========================== */
 table,
 th,
 td {
@@ -214,10 +215,17 @@ td {
   border-collapse: collapse;
   color: #1d3557;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
 }
 
+table {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* ===========================
+   SEARCH CONTAINER
+=========================== */
 .container-search {
   position: relative;
   bottom: 90px;
@@ -228,149 +236,57 @@ td {
   text-align: center;
 }
 
-@media only screen and (min-width: 360px) and (max-width: 428px) {
-  .input[type="text"],
-  .input-wrapper {
-    bottom: 30px;
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 800px) and (max-width: 1920px) {
-  .input[type="text"],
-  .input-wrapper {
-    width: 50%;
-  }
-}
-
-/* Footer */
-@media only screen and (min-width: 800px) and (max-width: 1920px) {
-  .bgimg-2 {
-    background-position: center;
-    /* background-image: url("img/Footer.png"); */
-    background-repeat: no-repeat;
-  }
-}
-
-/* Media queries for mobile devices */
-.copyright {
+/* ===== FOOTER ===== */
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 16px 48px;
+  gap: 8px;
   position: relative;
-  left: 1000px;
+}
+.footer-icons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.footer-icons a {
+  text-decoration: none;
+}
+.copyright {
   color: #1d3557;
+  margin: 0;
+  text-align: center;
+  font-size: 0.85rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
-
-/* Media queries for mobile devices */
-@media screen and (max-width: 1920px) {
+@media (max-width: 600px) {
+  .site-footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 24px;
+    position: static;
+  }
   .copyright {
-    position: relative;
-    bottom: 10px;
-    left: 700px;
+    text-align: center;
+    font-size: 0.75rem;
+    position: static;
+    transform: none;
   }
 }
 
-@media screen and (max-width: 1440px) {
-  .copyright {
-    position: relative;
-    bottom: 1px;
-    left: 450px;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .copyright {
-    position: relative;
-    top: 3px;
-    left: 400px;
-  }
-}
-
-@media screen and (max-width: 1080px) {
-  .copyright {
-    position: relative;
-    left: 310px;
-    top: 1px;
-  }
-}
-
-@media screen and (max-width: 810px) {
-  .copyright {
-    position: relative;
-    left: 150px;
-    top: -10px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .copyright {
-    position: relative;
-    left: 150px;
-    top: -17px;
-  }
-}
-
-@media screen and (max-width: 428px) {
-  .copyright {
-    font-size: x-small;
-    position: relative;
-    left: 30px;
-    top: 1px;
-  }
-}
-
-@media screen and (max-width: 414px) {
-  .copyright {
-    font-size: x-small;
-    position: relative;
-    left: 22px;
-    top: 2px;
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .copyright {
-    font-size: xx-small;
-    position: relative;
-    left: 25px;
-    top: 2px;
-  }
-}
-
-@media screen and (max-width: 384px) {
-  .copyright {
-    font-size: xx-small;
-    position: relative;
-    left: 20px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .copyright {
-    font-size: xx-small;
-    position: relative;
-    left: 16px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .copyright {
-    font-size: xx-small;
-    position: relative;
-    left: 9px;
-    top: 13px;
-  }
-}
-
-/* icons social network */
+/* ===== SOCIAL ICONS ===== */
 .fa-facebook {
   font-size: 30px;
-  margin: 5px 2px;
   padding: 10px;
   color: #3b5998;
 }
 
 .fa-instagram {
   font-size: 30px;
-  margin: 5px 2px;
   padding: 10px;
   background: radial-gradient(
     circle at 30% 107%,
@@ -381,148 +297,80 @@ td {
     #285aeb 90%
   );
   -webkit-background-clip: text;
-  /* Also define standard property for compatibility */
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.fa-snapchat {
-  font-size: 30px;
-  margin: 5px 2px;
-  padding: 10px;
-  color: #fffc00;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-.fa-twitter {
-  font-size: 30px;
-  margin: 5px 2px;
-  padding: 10px;
-  color: #1da1f2;
-}
-
-/* Media queries for mobile devices */
-@media screen and (max-width: 810px) {
-  .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    padding: 30px;
-    font-size: 30px;
-    width: 40px;
-    bottom: 20px;
+/* ===========================
+   RESPONSIVE — TABLET (≤ 1024px)
+=========================== */
+@media screen and (max-width: 1024px) {
+  .input-wrapper {
+    width: 60%;
   }
-}
-@media screen and (max-width: 428px) {
-  .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    padding: 30px;
-    font-size: 35px;
-    width: 40px;
+
+  #logo {
     left: 20px;
-    bottom: 20px;
+    width: 80px;
+    height: 80px;
   }
 }
 
-@media screen and (max-width: 414px) {
+/* ===========================
+   RESPONSIVE — MOBILE (≤ 768px)
+=========================== */
+@media screen and (max-width: 768px) {
+  .bgimg-1 {
+    background-image: url("img/Page 2 Responsive.png");
+  }
+
+  .input-wrapper {
+    width: 90%;
+    padding: 10px 16px;
+  }
+
+  .container-search {
+    bottom: 40px;
+    padding: 6px;
+  }
+
+  #logo {
+    top: 16px;
+    left: 16px;
+    width: 70px;
+    height: 70px;
+  }
+
+  .copyright {
+    font-size: 0.7rem;
+    margin-left: 8px;
+  }
+
   .fa-facebook,
   .fa-instagram,
   .fa-snapchat,
   .fa-twitter {
-    position: relative;
-    padding: 30px;
-    font-size: 35px;
-    width: 40px;
-    bottom: 15px;
-    left: 10px;
+    font-size: 26px;
+    padding: 8px;
+    margin: 4px 2px;
   }
 }
 
-@media screen and (max-width: 412px) {
-  .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    padding: 30px;
-    font-size: 35px;
-    width: 40px;
-    left: 10px;
-    top: 10px;
+/* ===========================
+   RESPONSIVE — SMALL MOBILE (≤ 428px)
+=========================== */
+@media screen and (max-width: 428px) {
+  .input-wrapper {
+    width: 95%;
+    font-size: 15px;
+    padding: 8px 12px;
   }
-}
 
-@media screen and (max-width: 411px) {
-  .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    padding: 30px;
-    font-size: 30px;
-    width: 40px;
-    left: 10px;
-    top: 10px;
+  .fa-search {
+    font-size: 22px;
   }
-}
 
-@media screen and (max-width: 390px) {
-  .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    padding: 30px;
-    font-size: 35px;
-    width: 50px;
-    margin: 5px 2px;
-    bottom: 10px;
-    left: 1px;
-  }
-}
-
-@media screen and (max-width: 384px) {
-  .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    padding: 30px;
-    font-size: 35px;
-    width: 40px;
-    bottom: 10px;
-    left: 1px;
-  }
-}
-
-@media screen and (max-width: 375px) {
-  .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    padding: 30px;
-    font-size: 35px;
-    width: 50px;
-    bottom: 2px;
-    left: -10px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .fa-facebook,
-  .fa-instagram,
-  .fa-snapchat,
-  .fa-twitter {
-    position: relative;
-    padding: 25px;
-    font-size: 29px;
-    width: 50px;
-    margin: 5px 2px;
-    bottom: 5px;
-    left: 5px;
+  .copyright {
+    font-size: 0.65rem;
   }
 }

@@ -1,31 +1,22 @@
-//Code for bar menu
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
+// ===== SIDEBAR =====
+const openNav = () =>
+  (document.getElementById("mySidenav").style.width = "250px");
+const closeNav = () => (document.getElementById("mySidenav").style.width = "0");
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
+// ===== MODAL =====
+const modal = document.getElementById("myModal");
+const img = document.getElementById("myImg");
+const modalImg = document.getElementById("img01");
+const captionText = document.getElementById("caption");
+const closeBtn = document.querySelector(".close");
+const downloadBtn = document.getElementById("downloadBtn");
 
-// Code for measures.html
-
-// Get the modal
-let modal = document.getElementById("myModal");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-let img = document.getElementById("myImg");
-let modalImg = document.getElementById("img01");
-let captionText = document.getElementById("caption");
-img.onclick = function () {
+img.onclick = () => {
   modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
+  modalImg.src = img.src;
+  captionText.innerHTML = img.alt;
+  downloadBtn.href = img.src;
+  downloadBtn.download = img.alt || "image";
 };
 
-// Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
+closeBtn.onclick = () => (modal.style.display = "none");

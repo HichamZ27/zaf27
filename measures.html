@@ -1,75 +1,122 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Website for Zakat Al Fitr">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Website for Zakat Al Fitr" />
     <title>Zakat Al Fitr 27</title>
-    <link rel="icon" type="image/x-icon" href="img/Zakat Al Fitr.png">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="measures.css">
-    <!-- CSS only -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="img/Zakat Al Fitr.png" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="measures.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Raleway"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    />
   </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidenav" id="mySidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="index.html" onclick="closeNav()"
+        ><i class="fa fa-home"></i> ACCUEIL</a
+      >
+      <a href="warehouse.html" onclick="closeNav()"
+        ><i class="fa fa-warehouse"></i> DÉPÔTS</a
+      >
+      <a href="measures.html" onclick="closeNav()"
+        ><i class="fa fa-balance-scale"></i> MESURES</a
+      >
+      <a href="team.html" onclick="closeNav()"
+        ><i class="fa fa-users"></i> L'ÉQUIPE</a
+      >
+      <a href="contact.html" onclick="closeNav()">
+        <button
+          class="w3-button w3-small w3-border w3-border-blue w3-round-large"
+        >
+          <u>RECEVOIR VOTRE ZAKAT AL FITR</u>
+        </button>
+      </a>
+    </div>
 
-<body>
-
-  <!-- Sidebar on small screens when clicking the menu icon -->
-  <div class="sidenav" id="mySidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="index.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-home"></i> ACCUEIL</a>
-    <a href="warehouse.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-warehouse"></i> DÉPÔTS</a>
-    <a href="measures.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-balance-scale"></i> MESURES</a>
-    <a href="team.html" onclick="closeNav()" class="w3-bar-item w3-button"><i class="fa fa-users"></i> L'ÉQUIPE</a>
-    <a href="contact.html" onclick="closeNav()"><button class="w3-button w3-small w3-border w3-border-blue w3-round-large"><u>RECEVOIR VOTRE ZAKAT AL FITR</u></button></a>
-    <!-- <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a> -->
-  </div>
-  
-  <!-- Header with full-height image -->
-  <header class="bgimg-1 w3-display-container" class="responsive" id="home">
-    <!-- Navbar (on top) -->
-    <div class="container" id="myNavbar">
-      <div class="topnav">
-        <!-- Right-sided navbar links -->
-        <div class="w3-right w3-hide-small">
-          <a href="index.html"><i class="fa fa-home"></i> ACCUEIL</a>
-          <a href="warehouse.html"><i class="fa fa-warehouse"></i> DÉPÔTS</a> 
-          <a href="measures.html" class="active"><i class="fa fa-balance-scale"></i> MESURES</a>
-          <a href="team.html"><i class="fa fa-users"></i> L'ÉQUIPE</a>
-          <button onclick="location.href='contact.html'" class="button button1"><b>RECEVOIR VOTRE<br>ZAKAT AL FITR</b></a>
+    <!-- Header -->
+    <header class="bgimg-1 w3-display-container" id="home">
+      <!-- Navbar -->
+      <div class="container" id="myNavbar">
+        <div class="topnav">
+          <div class="w3-right w3-hide-small">
+            <a href="index.html"><i class="fa fa-home"></i> ACCUEIL</a>
+            <a href="warehouse.html"><i class="fa fa-warehouse"></i> DÉPÔTS</a>
+            <a href="measures.html" class="active"
+              ><i class="fa fa-balance-scale" class="active"></i> MESURES</a
+            >
+            <a href="team.html"><i class="fa fa-users"></i> L'ÉQUIPE</a>
+            <button
+              onclick="location.href='contact.html'"
+              class="button button1"
+            >
+              <b>RECEVOIR VOTRE<br />ZAKAT AL FITR</b>
+            </button>
+          </div>
+          <a
+            href="javascript:void(0)"
+            class="w3-right w3-hide-large w3-hide-medium"
+            id="openbtn"
+            onclick="openNav()"
+            >&#9776;</a
+          >
         </div>
-
-        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" id="openbtn" onclick="openNav()">&#9776;</a>
+        <a
+          href="index.html"
+          class="w3-bar-item w3-button"
+          id="logo"
+          alt="App Zakat Al Fitr"
+        ></a>
       </div>
-      <a href="index.html" class="w3-bar-item w3-button" id="logo" alt="App Zakat Al Fitr"></a>
-    </div>
-      
-    <!-- Trigger the Modal -->
-    <img id="myImg" src="img/Mesures.jpg" alt="Tableau des mesures" class="responsive" />
-    <br />
-    <p><i>Cliquez sur l'image</i></p>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <span class="close">&times;</span>
-      <img class="modal-content" id="img01">
-      <div id="caption"></div>
-    </div>
+      <!-- Image + Modal trigger -->
+      <img
+        id="myImg"
+        src="img/Denrées 1447_2026.png"
+        alt="Tableau des mesures"
+        class="responsive"
+      />
+      <br />
+      <p><i>Cliquez sur l'image</i></p>
+
+      <!-- Modal -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01" />
+        <div id="caption"></div>
+        <a id="downloadBtn" download>
+          <button>⬇ Télécharger</button>
+        </a>
+      </div>
 
       <!-- Footer -->
-      <footer class="w3-display-bottomleft w3-text-grey w3-large-2" style="padding:28px 48px">
-        <a href="https://www.facebook.com/profile.php?id=100090586256162" target="_blank"><i class="fa-brands fa-facebook w3-hover-opacity"></i></a>
-        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram w3-hover-opacity"></i></a>
-        <a href="https://accounts.snapchat.com/" target="_blank"><i class="fa-brands fa-snapchat w3-hover-opacity"></i></a>
-        <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter w3-hover-opacity"></i></a>
-        <p class="bgimg-2 copyright w3-center">&#169 Copyright 2024 - Tous droits réservés - ZHWEB</p>
+      <footer class="site-footer">
+        <div class="footer-icons">
+          <a
+            href="https://www.facebook.com/profile.php?id=100090586256162"
+            target="_blank"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+        <p class="copyright">
+          &#169; Zakat Al-Fitr 2026 - Tous droits réservés - ZHWEB
+        </p>
       </footer>
+    </header>
 
-  </header>
-
-  <script src="measures.js"></script>
-
-</body>
+    <script src="measures.js"></script>
+  </body>
 </html>

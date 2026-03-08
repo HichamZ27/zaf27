@@ -1,31 +1,31 @@
-let form = document.getElementById("my-form");
+const form = document.getElementById("my-form");
 
 async function handleSubmit(event) {
   event.preventDefault();
-  let status = document.getElementById("status");
-  let data = new FormData(event.target);
-  fetch(event.target.action, {
-    method: form.method,
-    body: data,
-    headers: {
-      Accept: "application/json",
-    },
-  })
-    .then((response) => {
-      status.classList.add("success");
-      status.innerHTML =
-        "Votre message a été envoyé avec succès!\
-      Un membre de notre équipe va prendre contact avec vous.";
-      form.reset();
-    })
-    .catch((error) => {
-      status.classList.add("error");
-      status.innerHTML = "Oops! Une erreur s'est produite veuillez réessayer!";
+  const status = document.getElementById("status");
+  const data = new FormData(event.target);
+
+  try {
+    const response = await fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: { Accept: "application/json" },
     });
+
+    if (!response.ok) throw new Error("Server error");
+
+    status.className = "success";
+    status.innerHTML =
+      "Votre message a été envoyé avec succès!<br>Un membre de notre équipe va prendre contact avec vous.";
+    form.reset();
+  } catch (error) {
+    status.className = "error";
+    status.innerHTML = "Oops! Une erreur s'est produite veuillez réessayer!";
+  }
 }
+
 form.addEventListener("submit", handleSubmit);
 
-//Code for bar menu
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }

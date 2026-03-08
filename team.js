@@ -1,58 +1,45 @@
-//Code for bar menu
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
+// ===== SIDEBAR =====
+const openNav  = () => document.getElementById("mySidenav").style.width = "250px";
+const closeNav = () => document.getElementById("mySidenav").style.width = "0";
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
+// ===== COUNTDOWN =====
+(() => {
+  const SECOND = 1000;
+  const MINUTE = SECOND * 60;
+  const HOUR   = MINUTE * 60;
+  const DAY    = HOUR   * 24;
 
-// Code Team page
-(function () {
-  const second = 1000,
-    minute = second * 60,
-    hour = minute * 60,
-    day = hour * 24;
+  const today    = new Date();
+  const dd       = String(today.getDate()).padStart(2, "0");
+  const mm       = String(today.getMonth() + 1).padStart(2, "0");
+  const yyyy     = today.getFullYear();
+  const dayMonth = "03/18/";
 
-  //I'm adding this section so I don't have to keep updating this pen every year :-)
-  //remove this if you don't need it
-  let today = new Date(),
-    dd = String(today.getDate()).padStart(2, "0"),
-    mm = String(today.getMonth() + 1).padStart(2, "0"),
-    yyyy = today.getFullYear(),
-    nextYear = yyyy + 1,
-    dayMonth = "04/10/",
-    birthday = dayMonth + yyyy;
+  let targetDate = `${dayMonth}${yyyy}`;
+  if (`${mm}/${dd}/${yyyy}` > targetDate) targetDate = `${dayMonth}${yyyy + 1}`;
 
-  today = mm + "/" + dd + "/" + yyyy;
-  if (today > birthday) {
-    birthday = dayMonth + nextYear;
-  }
-  //end
+  const countDown = new Date(targetDate).getTime();
 
-  const countDown = new Date(birthday).getTime(),
-    x = setInterval(function () {
-      const now = new Date().getTime(),
-        distance = countDown - now;
+  const els = {
+    days:     document.getElementById("days"),
+    hours:    document.getElementById("hours"),
+    minutes:  document.getElementById("minutes"),
+    seconds:  document.getElementById("seconds"),
+    headline: document.getElementById("headline"),
+  };
 
-      (document.getElementById("days").innerText = Math.floor(distance / day)),
-        (document.getElementById("hours").innerText = Math.floor(
-          (distance % day) / hour
-        )),
-        (document.getElementById("minutes").innerText = Math.floor(
-          (distance % hour) / minute
-        )),
-        (document.getElementById("seconds").innerText = Math.floor(
-          (distance % minute) / second
-        ));
+  const x = setInterval(() => {
+    const distance = countDown - new Date().getTime();
 
-      //do something later when date is reached
-      if (distance < 0) {
-        document.getElementById("headline").innerText = "C'est terminé!";
-        document.getElementById("countdown").style.display = "none";
-        document.getElementById("content").style.display = "block";
-        clearInterval(x);
-      }
-      //seconds
-    }, 0);
+    if (distance < 0) {
+      els.headline.innerText = "C'est terminé!";
+      clearInterval(x);
+      return;
+    }
+
+    els.days.innerText    = Math.floor(distance / DAY);
+    els.hours.innerText   = Math.floor((distance % DAY)  / HOUR);
+    els.minutes.innerText = Math.floor((distance % HOUR) / MINUTE);
+    els.seconds.innerText = Math.floor((distance % MINUTE) / SECOND);
+  }, 1000);
 })();
