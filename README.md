@@ -27,7 +27,7 @@ This website streamlines the collection and distribution management of Zakat Al-
 > _(Update this section with your actual stack)_
 
 - **Frontend**: HTML / CSS / JavaScript \*
-- **Form**: _ Formspree _
+- **Form**: * Formspree *
 
 ---
 
